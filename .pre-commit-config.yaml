@@ -1,0 +1,11 @@
+repos:
+  - repo: local
+    hooks:
+    -   id: lint-project
+        name: Biome lint
+        language: system
+        entry: bun run lint
+    -   id: format-project
+        name: Biome format
+        language: system
+        entry: bun run format

@@ -1,0 +1,95 @@
+---
+title: PropField
+description: Display a prop field with a name, type, and description.
+section: Components
+---
+
+<script>
+	import { PropField, Collapsible } from "@bladocs/core";
+</script>
+
+Use the `PropField` component to annotate props/params in your documentation.
+
+## Usage
+
+```svelte title="document.md"
+<script>
+	import { PropField } from "@bladocs/core";
+</script>
+
+<PropField name="checked" type="boolean" required defaultValue="false">
+	<!-- Space here-->
+	The checked state of the checkbox.
+	<!-- Space here-->
+</PropField>
+```
+
+## Examples
+
+### Basic
+
+<PropField name="checked" type="boolean" defaultValue="false" required>
+The checked state of the checkbox.
+</PropField>
+
+### Object
+
+You can use `PropField` in combination with the [`Collapsible`](/docs/v1/components/collapsible) component to represent more complex types.
+
+```svelte title="document.md"
+<script>
+	import { PropField, Collapsible } from "@bladocs/core";
+</script>
+
+<PropField name="options" type="CheckboxOptions" required>
+	<!-- Space here -->
+	Configuration options to customize the behavior of the `Checkbox` component.
+	<!-- Space here -->
+	<Collapsible title="properties">
+		<PropField name="width" type="number" required>
+			The width to apply to the checkbox.
+		</PropField>
+		<PropField name="height" type="number" required defaultValue="20">
+			The height to apply to the checkbox.
+		</PropField>
+	</Collapsible>
+</PropField>
+```
+
+<PropField name="options" type="CheckboxOptions" required>
+
+Configuration options to customize the behavior of the `Checkbox` component.
+
+<Collapsible title="properties">
+	<PropField name="width" type="number" required>
+	The width to apply to the checkbox.
+	</PropField>
+	<PropField name="height" type="number" required defaultValue="20">
+	The height to apply to the checkbox.
+	</PropField>
+</Collapsible>
+</PropField>
+
+## Some Really Long Title That will Wrap
+
+## Props
+
+<PropField name="name" type="string" required>
+The name of the prop.
+</PropField>
+
+<PropField name="type" type="string" required>
+The type of the prop.
+</PropField>
+
+<PropField name="defaultValue" type="string">
+The default value of the prop.
+</PropField>
+
+<PropField name="required" type="boolean" defaultValue="false">
+Whether the prop is required.
+</PropField>
+
+<PropField name="children" type="Snippet">
+The description/content to display within the prop field.
+</PropField>

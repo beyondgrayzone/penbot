@@ -1,0 +1,20 @@
+{
+  "name": "@bladocs/mds",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A tool to convert raw mds into usable mds",
+  "bin": {
+    "mds": "./bin/mds"
+  },
+  "scripts": {
+    "build": "go build -o ./bin/mds .",
+    "clean": "rm -rf ./bin",
+    "processMds": "go run .",
+    "version": "go run . version",
+    "sections": "go run . sections",
+    "prepare": "bun --bun run clean && bun --bun run build"
+  },
+  "files": [
+    "bin"
+  ]
+}

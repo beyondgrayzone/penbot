@@ -1,0 +1,105 @@
+{
+	"name": "@bladocs/core",
+	"version": "0.0.1",
+	"scripts": {
+		"build": "bun --bun run package",
+		"sync": "svelte-kit sync",
+		"dev": "svelte-package --watch",
+		"dev:svelte": "vite dev",
+		"package": "bun run sync && svelte-package",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
+	},
+	"files": [
+		"dist",
+		"!dist/**/*.test.*",
+		"!dist/**/*.spec.*"
+	],
+	"sideEffects": [
+		"**/*.css"
+	],
+	"types": "./dist/index.d.ts",
+	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/bladocs_eco/bladocs",
+		"directory": "packages/core"
+	},
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"svelte": "./dist/index.js",
+			"default": "./dist/index.js"
+		},
+		"./globals.css": "./dist/styles/globals.css",
+		"./theme-amber.css": "./dist/styles/theme-amber.css",
+		"./theme-blue.css": "./dist/styles/theme-blue.css",
+		"./theme-cyan.css": "./dist/styles/theme-cyan.css",
+		"./theme-emerald.css": "./dist/styles/theme-emerald.css",
+		"./theme-fuchsia.css": "./dist/styles/theme-fuchsia.css",
+		"./theme-green.css": "./dist/styles/theme-green.css",
+		"./theme-indigo.css": "./dist/styles/theme-indigo.css",
+		"./theme-lime.css": "./dist/styles/theme-lime.css",
+		"./theme-orange.css": "./dist/styles/theme-orange.css",
+		"./theme-pink.css": "./dist/styles/theme-pink.css",
+		"./theme-purple.css": "./dist/styles/theme-purple.css",
+		"./theme-red.css": "./dist/styles/theme-red.css",
+		"./theme-rose.css": "./dist/styles/theme-rose.css",
+		"./theme-sky.css": "./dist/styles/theme-sky.css",
+		"./theme-teal.css": "./dist/styles/theme-teal.css",
+		"./theme-violet.css": "./dist/styles/theme-violet.css",
+		"./theme-yellow.css": "./dist/styles/theme-yellow.css",
+		"./mdsxConfig": {
+			"types": "./dist/configs/mdsx-config.d.ts",
+			"default": "./dist/configs/mdsx-config.js"
+		},
+		"./search": {
+			"types": "./dist/components/search/search-utils.d.ts",
+			"default": "./dist/components/search/search-utils.js"
+		}
+	},
+	"peerDependencies": {
+		"@sveltejs/kit": "^2.0.0",
+		"bits-ui": "catalog:",
+		"svelte": "^5.0.0",
+		"tailwindcss": "^4.0.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"devDependencies": {
+		"@sveltejs/kit": "catalog:",
+		"@sveltejs/package": "2.5.0",
+		"@sveltejs/vite-plugin-svelte": "catalog:",
+		"@tailwindcss/vite": "catalog:",
+		"@types/hast": "^3.0.4",
+		"@types/mdast": "^4.0.4",
+		"@types/node": "catalog:",
+		"@bladocs/mdsx": "workspace:*",
+		"publint": "^0.3.2",
+		"svelte": "catalog:",
+		"svelte-check": "catalog:",
+		"tailwindcss": "catalog:",
+		"typescript": "catalog:",
+		"unified": "^11.0.5",
+		"vite": "catalog:"
+	},
+	"dependencies": {
+		"bits-ui": "catalog:",
+		"clsx": "^2.1.1",
+		"flexsearch": "^0.7.43",
+		"mode-watcher": "^1.0.2",
+		"phosphor-svelte": "^3.0.1",
+		"rehype-autolink-headings": "^7.1.0",
+		"rehype-pretty-code": "^0.14.0",
+		"rehype-slug": "^6.0.0",
+		"remark-gfm": "^4.0.0",
+		"remove-markdown": "^0.5.5",
+		"shiki": "^1.24.0",
+		"svelte-toolbelt": "^0.10.5",
+		"tailwind-merge": "^3.1.0",
+		"tailwind-variants": "^1.0.0",
+		"tw-animate-css": "^1.2.5",
+		"lucide-svelte": "^0.447.0",
+		"unist-util-visit": "^5.0.0"
+	}
+}

@@ -1,0 +1,33 @@
+{
+  "name": "@bladocs/mdsx",
+  "description": "Its mdsx",
+  "private": true,
+  "version": "0.0.1",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "esrap": "^1.2.1",
+    "hast-util-to-html": "^9.0.0",
+    "magic-string": "^0.30.5",
+    "mdast-util-to-markdown": "^2.1.0",
+    "rehype-stringify": "^10.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.0",
+    "unified": "^11.0.4",
+    "unist-util-visit": "^5.0.0",
+    "vfile": "^6.0.1",
+    "yaml": "^2.3.4",
+    "zimmerframe": "^1.1.0"
+  }
+}

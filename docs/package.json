@@ -1,0 +1,40 @@
+{
+	"name": "@bladocs/docs",
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+	  "dev": "bun run --parallel dev:content dev:svelte",
+		"sync": "svelte-kit sync",
+		"dev:content": "velite dev --watch",
+		"dev:svelte": "vite dev",
+		"build": "velite && bun --bun ./scripts/update-velite-output.js && bun --bun run build:search && vite build",
+		"build:search": "bun --bun run ./scripts/build-search-data.js",
+		"preview": "vite preview",
+		"check": "velite && svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "bun run build:content && svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+	},
+  "dependencies": {
+    "tailwind-variants": "catalog:",
+    "clsx": "catalog:",
+		"bits-ui": "catalog:"
+  },
+	"devDependencies": {
+		"@types/bun": "catalog:",
+		"tailwind-merge": "catalog:",
+		"mode-watcher": "catalog:",
+		"@bladocs/core": "workspace:*",
+		"@sveltejs/kit": "catalog:",
+		"@sveltejs/vite-plugin-svelte": "catalog:",
+		"@tailwindcss/vite": "catalog:",
+		"@bladocs/mdsx": "workspace:*",
+		"phosphor-svelte": "^3.0.1",
+		"svelte": "catalog:",
+		"svelte-check": "catalog:",
+		"tailwindcss": "catalog:",
+		"tw-animate-css": "catalog:",
+		"typescript": "catalog:",
+		"velite": "^0.2.4",
+		"vite": "catalog:",
+		"vite-plugin-devtools-json": "^1.0.0"
+	}
+}

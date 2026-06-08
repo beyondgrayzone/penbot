@@ -1,0 +1,8 @@
+/* @import "@bladocs/core/theme-lime.css"; */
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+@import "@bladocs/core/globals.css";
+@source "../node_modules/@bladocs/core";
