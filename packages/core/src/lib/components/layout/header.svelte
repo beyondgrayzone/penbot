@@ -4,6 +4,7 @@
 	import Search from "$lib/components/search/search.svelte";
 	import SocialIcons from "../social-icons.svelte";
 	import ThemeDropdown from "./theme-dropdown.svelte";
+	import ThemeSwitcher from "./theme-switcher.svelte";
 
 	let { version }: { version?: string } = $props();
 
@@ -19,8 +20,9 @@
 	<Search {version} />
 
 	<div class="ml-auto flex items-center gap-8">
-		<div class="flex items-center">
+		<div class="flex items-center gap-3">
 			<SocialIcons />
+			<ThemeSwitcher />
 			<ThemeDropdown />
 		</div>
 	</div>

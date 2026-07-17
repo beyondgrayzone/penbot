@@ -1,39 +1,185 @@
 # Theme
 
-**File:** `src/app.css`
+**Files:** `docs/src/routes/+layout.svelte`, `docs/src/app.css`, `docs/src/app.html`
 
 ## Usage
 
-Import a theme CSS file **before** the globals:
+Penbot uses a `data-theme` attribute on `<html>` — not single-file imports. All themes are imported together. The active theme is controlled by `ModeWatcher`.
+
+### Set the default theme
+
+Change `defaultTheme` in `docs/src/routes/+layout.svelte`:
+
+```svelte
+<ModeWatcher defaultTheme="oceanic" />
+```
+
+Optionally match the static fallback in `docs/src/app.html`:
+
+```html
+<html lang="en" data-theme="oceanic">
+```
+
+### CSS import order (critical)
+
+In `docs/src/app.css`, `globals.css` must come **first**, themes after:
 
 ```css
-/* @import "@penbot/core/theme-orange.css"; */
-@import "@penbot/core/theme-emerald.css";
-@import "@penbot/core/globals.css";
+@import "@penbot/core/globals.css";          /* fallback :root rules — FIRST */
+@import "@penbot/core/theme-oceanic.css";    /* [data-theme="oceanic"] rules */
+@import "@penbot/core/theme-forest.css";
+/* ... all other themes ... */
 ```
+
+Themes come after globals so their `[data-theme]` selectors (same specificity as `:root`) win by source order.
+
+### First-time switch
+
+If you previously visited the site, clear localStorage (`mode-watcher-theme` key) or use an incognito window. Stored user preference overrides the default.
+
+## How it works
+
+1. `ModeWatcher` injects an inline script that sets `data-theme` on `<html>` before first paint
+2. Reads `localStorage` → falls back to `defaultTheme` prop → sets `data-theme` attribute
+3. `.dark` class is toggled independently for dark mode
+4. CSS uses `[data-theme="oceanic"]` and `[data-theme="oceanic"].dark` selectors
 
 ## Available themes
 
-| Theme    | Import path                          |
-|----------|--------------------------------------|
-| orange   | `@penbot/core/theme-orange.css`    |
-| green    | `@penbot/core/theme-green.css`     |
-| blue     | `@penbot/core/theme-blue.css`      |
-| purple   | `@penbot/core/theme-purple.css`    |
-| pink     | `@penbot/core/theme-pink.css`      |
-| lime     | `@penbot/core/theme-lime.css`      |
-| yellow   | `@penbot/core/theme-yellow.css`    |
-| cyan     | `@penbot/core/theme-cyan.css`      |
-| teal     | `@penbot/core/theme-teal.css`      |
-| violet   | `@penbot/core/theme-violet.css`    |
-| amber    | `@penbot/core/theme-amber.css`     |
-| red      | `@penbot/core/theme-red.css`       |
-| sky      | `@penbot/core/theme-sky.css`       |
-| emerald  | `@penbot/core/theme-emerald.css`   |
-| fuchsia  | `@penbot/core/theme-fuchsia.css`   |
-| rose     | `@penbot/core/theme-rose.css`      |
+### Full semantic themes (define all UI tokens)
 
-## Tailwind variables
+| Theme | Key | Import path |
+|-------|-----|-------------|
+| Oceanic Blue | `oceanic` | `@penbot/core/theme-oceanic.css` |
+| Forest Green | `forest` | `@penbot/core/theme-forest.css` |
+| Sober (grayscale) | `sober-1` | `@penbot/core/theme-sober-1.css` |
 
-- **Gray** — Custom gray color scale overrides Tailwind's default
-- **Brand** — Use `brand` color in Tailwind for brand-colored elements
+### Brand-only themes (define only accent/brand tokens)
+
+| Theme | Key | Import path |
+|-------|-----|-------------|
+| Amber | `amber` | `@penbot/core/theme-amber.css` |
+| Blue | `blue` | `@penbot/core/theme-blue.css` |
+| Cyan | `cyan` | `@penbot/core/theme-cyan.css` |
+| Emerald | `emerald` | `@penbot/core/theme-emerald.css` |
+| Fuchsia | `fuchsia` | `@penbot/core/theme-fuchsia.css` |
+| Green | `green` | `@penbot/core/theme-green.css` |
+| Indigo | `indigo` | `@penbot/core/theme-indigo.css` |
+| Lime | `lime` | `@penbot/core/theme-lime.css` |
+| Orange | `orange` | `@penbot/core/theme-orange.css` |
+| Pink | `pink` | `@penbot/core/theme-pink.css` |
+| Purple | `purple` | `@penbot/core/theme-purple.css` |
+| Red | `red` | `@penbot/core/theme-red.css` |
+| Rose | `rose` | `@penbot/core/theme-rose.css` |
+| Sky | `sky` | `@penbot/core/theme-sky.css` |
+| Teal | `teal` | `@penbot/core/theme-teal.css` |
+| Violet | `violet` | `@penbot/core/theme-violet.css` |
+| Yellow | `yellow` | `@penbot/core/theme-yellow.css` |
+
+## Dark mode
+
+Dark mode works alongside any theme. `ModeWatcher` toggles `.dark` on `<html>`. CSS composes both:
+
+```
+[data-theme="oceanic"]          → light Oceanic
+[data-theme="oceanic"].dark     → dark Oceanic
+[data-theme="forest"].dark      → dark Forest
+```
+
+## CSS tokens
+
+### Semantic UI tokens (full themes only)
+
+`--theme-color-background`, `--theme-color-background-secondary`, `--theme-color-foreground`, `--theme-color-muted`, `--theme-color-muted-foreground`, `--theme-color-border`, `--theme-color-primary`, `--theme-color-primary-foreground`, `--theme-color-primary-hover`, `--theme-color-primary-active`, `--theme-color-secondary`, `--theme-color-secondary-foreground`, `--theme-color-accent`, `--theme-color-accent-foreground`, `--theme-color-destructive`, `--theme-color-destructive-foreground`, `--theme-color-destructive-border`
+
+### Scale palette (all themes)
+
+`--theme-color-current-50` through `950` (11-stop scale, lightest → darkest)
+
+### Brand tokens (all themes)
+
+`--theme-color-brand-50` through `950`, `--theme-color-brand`, `--theme-color-brand-border`, `--theme-color-brand-hover`, `--theme-color-brand-foreground`, `--theme-color-brand-link`, `--theme-color-brand-link-hover`, `--theme-color-brand-code-link`, `--theme-color-brand-code-link-hover`
+
+## Using tokens
+
+### Tailwind (arbitrary values)
+
+```html
+<div class="bg-[var(--theme-color-background-secondary)] text-[var(--theme-color-foreground)]">
+```
+
+### Svelte components
+
+```svelte
+<button style="background: var(--theme-color-primary)">
+```
+
+### Tailwind utility classes
+
+- `bg-background`, `text-foreground`, `bg-background-secondary`
+- `bg-primary`, `text-primary-foreground`, `bg-muted`
+- `text-brand`, `bg-brand`, `border-brand`
+- Gray scale: `bg-gray-50` through `bg-gray-950` (maps to current theme's scale)
+
+## Dev-only theme switcher
+
+A theme picker dropdown is built into the header during development (`bun run dev`). It's automatically removed from production builds via `{#if dev}`.
+
+## Adding a custom theme
+
+### Brand-only (accent colors only)
+
+Create `packages/core/src/lib/styles/theme-coral.css`:
+
+```css
+[data-theme="coral"] {
+  --theme-color-current-50: var(--color-red-50);
+  /* ... through 950 ... */
+
+  --theme-color-brand-50: var(--color-orange-50);
+  /* ... through 950 ... */
+
+  --theme-color-brand: var(--theme-color-brand-600);
+  --theme-color-brand-border: var(--theme-color-brand-700);
+  --theme-color-brand-hover: var(--theme-color-brand-500);
+  --theme-color-brand-foreground: var(--theme-color-background);
+  --theme-color-brand-link: var(--theme-color-brand-600);
+  --theme-color-brand-link-hover: var(--theme-color-brand-700);
+  --theme-color-brand-code-link: var(--theme-color-brand-600);
+  --theme-color-brand-code-link-hover: var(--theme-color-brand-500);
+}
+
+[data-theme="coral"].dark,
+.dark [data-theme="coral"] {
+  --theme-color-brand-foreground: var(--theme-color-foreground);
+  --theme-color-brand-link: var(--theme-color-brand-500);
+  --theme-color-brand-link-hover: var(--theme-color-brand-400);
+  --theme-color-brand-code-link: var(--theme-color-brand-400);
+  --theme-color-brand-code-link-hover: var(--theme-color-brand-300);
+}
+```
+
+### Full semantic (all UI tokens)
+
+Define every token from scratch. Reference `theme-oceanic.css` in the source.
+
+### Wiring it up
+
+1. Add export to `packages/core/package.json`
+2. Add `@import "@penbot/core/theme-coral.css"` to `docs/src/app.css` (after all other theme imports)
+3. Set `defaultTheme="coral"` in `+layout.svelte`
+4. Rebuild: `bun run build`
+
+## Runtime theme switching
+
+```svelte
+<script>
+  import { setTheme } from "mode-watcher";
+</script>
+<select onchange={(e) => setTheme(e.target.value)}>
+  <option value="oceanic">Oceanic</option>
+  <option value="forest">Forest</option>
+</select>
+```
+
+`mode-watcher` handles localStorage persistence automatically. The `storage` event syncs across open tabs.

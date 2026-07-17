@@ -9,7 +9,7 @@
 	useSiteConfig(() => siteConfig);
 </script>
 
-<ModeWatcher />
+<ModeWatcher defaultTheme="oceanic" />
 <div class="bg-[var(--theme-color-current-300)] dark:bg-[var(--theme-color-current-700)]">
 	{@render children?.()}
 </div>

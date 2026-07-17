@@ -1,34 +1,49 @@
-@import "./shared.css";
-:root {
-	--theme-color-brand-50: var(--color-purple-50);
-	--theme-color-brand-100: var(--color-purple-100);
-	--theme-color-brand-200: var(--color-purple-200);
-	--theme-color-brand-300: var(--color-purple-300);
-	--theme-color-brand-400: var(--color-purple-400);
-	--theme-color-brand-500: var(--color-purple-500);
-	--theme-color-brand-600: var(--color-purple-600);
-	--theme-color-brand-700: var(--color-purple-700);
-	--theme-color-brand-800: var(--color-purple-800);
-	--theme-color-brand-900: var(--color-purple-900);
-	--theme-color-brand-950: var(--color-purple-950);
 
-	--theme-color-brand: var(--theme-color-brand-600);
-	--theme-color-brand-border: var(--theme-color-brand-700);
-	--theme-color-brand-hover: var(--theme-color-brand-500);
-	--theme-color-brand-foreground: var(--theme-color-background);
-	--theme-color-brand-link: var(--theme-color-brand-600);
-	--theme-color-brand-link-hover: var(--theme-color-brand-700);
-	--theme-color-brand-code-link: var(--theme-color-brand-600);
-	--theme-color-brand-code-link-hover: var(--theme-color-brand-500);
+[data-theme="purple"] {
+  /* Scale palette */
+  --theme-color-current-50: var(--color-purple-50);
+  --theme-color-current-100: var(--color-purple-100);
+  --theme-color-current-200: var(--color-purple-200);
+  --theme-color-current-300: var(--color-purple-300);
+  --theme-color-current-400: var(--color-purple-400);
+  --theme-color-current-500: var(--color-purple-500);
+  --theme-color-current-600: var(--color-purple-600);
+  --theme-color-current-700: var(--color-purple-700);
+  --theme-color-current-800: var(--color-purple-800);
+  --theme-color-current-900: var(--color-purple-900);
+  --theme-color-current-950: var(--color-purple-950);
+
+  /* Brand colors */
+  --theme-color-brand-50: var(--color-purple-50);
+  --theme-color-brand-100: var(--color-purple-100);
+  --theme-color-brand-200: var(--color-purple-200);
+  --theme-color-brand-300: var(--color-purple-300);
+  --theme-color-brand-400: var(--color-purple-400);
+  --theme-color-brand-500: var(--color-purple-500);
+  --theme-color-brand-600: var(--color-purple-600);
+  --theme-color-brand-700: var(--color-purple-700);
+  --theme-color-brand-800: var(--color-purple-800);
+  --theme-color-brand-900: var(--color-purple-900);
+  --theme-color-brand-950: var(--color-purple-950);
+
+  --theme-color-brand: var(--theme-color-brand-600);
+  --theme-color-brand-border: var(--theme-color-brand-700);
+  --theme-color-brand-hover: var(--theme-color-brand-500);
+  --theme-color-brand-foreground: var(--theme-color-background);
+  --theme-color-brand-link: var(--theme-color-brand-600);
+  --theme-color-brand-link-hover: var(--theme-color-brand-700);
+  --theme-color-brand-code-link: var(--theme-color-brand-600);
+  --theme-color-brand-code-link-hover: var(--theme-color-brand-500);
 }
 
-.dark {
-	--theme-color-brand: var(--theme-color-brand-600);
-	--theme-color-brand-border: var(--theme-color-brand-700);
-	--theme-color-brand-hover: var(--theme-color-brand-500);
-	--theme-color-brand-foreground: var(--theme-color-foreground);
-	--theme-color-brand-link: var(--theme-color-brand-500);
-	--theme-color-brand-link-hover: var(--theme-color-brand-400);
-	--theme-color-brand-code-link: var(--theme-color-brand-400);
-	--theme-color-brand-code-link-hover: var(--theme-color-brand-300);
+[data-theme="purple"].dark,
+.dark [data-theme="purple"] {
+  --theme-color-brand: var(--theme-color-brand-600);
+  --theme-color-brand-border: var(--theme-color-brand-700);
+  --theme-color-brand-hover: var(--theme-color-brand-500);
+  --theme-color-brand-foreground: var(--theme-color-foreground);
+  --theme-color-brand-link: var(--theme-color-brand-500);
+  --theme-color-brand-link-hover: var(--theme-color-brand-400);
+  --theme-color-brand-code-link: var(--theme-color-brand-400);
+  --theme-color-brand-code-link-hover: var(--theme-color-brand-300);
 }

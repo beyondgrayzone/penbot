@@ -67,14 +67,14 @@ bun run docs:sections list
 
 ## Step 5: Update the site config
 
-Edit `docs/src/lib/site-config.json` — change the name, description, URL, keywords, and license to match your product.
+Edit `docs/src/lib/site-config.json`  change the name, description, URL, keywords, and license to match your product.
 
 ---
 
 ## Step 6: Write your markdown files
 
 Create markdown files under `docs/src/mds/v1/`. At minimum you need:
-- `index.md` — The introduction/landing page for your docs
+- `index.md`  The introduction/landing page for your docs
 - Any other pages you need (e.g., `getting-started.md`, `configuration.md`, etc.)
 
 Each file must have frontmatter with **at least** `title`, `description`, and `section`. The `section` value must match one of the sections defined in `velite.config.js`.

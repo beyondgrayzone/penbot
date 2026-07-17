@@ -48,6 +48,9 @@
 		"./theme-teal.css": "./dist/styles/theme-teal.css",
 		"./theme-violet.css": "./dist/styles/theme-violet.css",
 		"./theme-yellow.css": "./dist/styles/theme-yellow.css",
+		"./theme-oceanic.css": "./dist/styles/theme-oceanic.css",
+		"./theme-forest.css": "./dist/styles/theme-forest.css",
+		"./theme-sober-1.css": "./dist/styles/theme-sober-1.css",
 		"./mdsxConfig": {
 			"types": "./dist/configs/mdsx-config.d.ts",
 			"default": "./dist/configs/mdsx-config.js"

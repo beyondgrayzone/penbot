@@ -1,8 +1,27 @@
-/* @import "@penbot/core/theme-lime.css"; */
-
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+
 @import "@penbot/core/globals.css";
+@import "@penbot/core/theme-oceanic.css";
+@import "@penbot/core/theme-forest.css";
+@import "@penbot/core/theme-sober-1.css";
+@import "@penbot/core/theme-amber.css";
+@import "@penbot/core/theme-blue.css";
+@import "@penbot/core/theme-cyan.css";
+@import "@penbot/core/theme-emerald.css";
+@import "@penbot/core/theme-fuchsia.css";
+@import "@penbot/core/theme-green.css";
+@import "@penbot/core/theme-indigo.css";
+@import "@penbot/core/theme-lime.css";
+@import "@penbot/core/theme-orange.css";
+@import "@penbot/core/theme-pink.css";
+@import "@penbot/core/theme-purple.css";
+@import "@penbot/core/theme-red.css";
+@import "@penbot/core/theme-rose.css";
+@import "@penbot/core/theme-sky.css";
+@import "@penbot/core/theme-teal.css";
+@import "@penbot/core/theme-violet.css";
+@import "@penbot/core/theme-yellow.css";
 @source "../node_modules/@penbot/core";

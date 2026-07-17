@@ -1,23 +1,155 @@
 # What is Penbot?
-- This repo is Penbot
-- This repo exhibits an example of using Sveltekit as means to create static documentation sites
-- This repo is not a framework, just clone it and start changing stuff to make it yours
-- Once you make it yours, make approriate changes to this README.md file
-- Its not for everyone, but it may very well be for you
+
+[![GitHub](https://img.shields.io/badge/GitHub-beyondgrayzone/penbot-181717?logo=github)](https://github.com/beyondgrayzone/penbot)
+
+Penbot is a starter kit for building **static documentation sites** using SvelteKit. It's not a framework  just clone it, strip out the demo content, and make it yours.
+
+- Uses [SvelteKit](https://kit.svelte.dev/) to generate fully static HTML sites
+- Markdown-powered documentation with [Velite](https://velite.js.org/)
+- Built-in version management (v1, v2, v3...)
+- Searchable, section-organized docs out of the box
+- Ready-made Svelte components: Callouts, Tabs, Steps, Cards, and more
+
+> Not for everyone, but it may very well be for you.
+
+---
+
+# Getting Started
+
+> **Repo**: [https://github.com/beyondgrayzone/penbot](https://github.com/beyondgrayzone/penbot)
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/beyondgrayzone/penbot.git my-docs
+cd my-docs
+
+# 2. Install dependencies (requires Bun >= v1.3.9)
+bun i
+
+# 3. Build required artifacts (first time only)
+bun run build
+
+# 4. Start the dev server
+bun run dev
+```
+
+Open `http://localhost:5173` and you'll see the default Penbot documentation site.
+
+---
+
+## Turning it into your own docs
+
+Follow these steps to replace the demo content with documentation for your own product:
+
+### 1. Remove the existing versions
+
+```bash
+bun run docs:version:remove -- v2
+bun run docs:version:remove -- v1
+```
+
+### 2. (Optional) Clean up stale build artifacts
+
+```bash
+rm -rf docs/src/mds_final
+```
+
+### 3. Add your fresh v1
+
+```bash
+bun run docs:version:add -- v1
+```
+
+This creates blank scaffolding:
+- Route: `docs/src/routes/(docs)/docs/v1/`
+- API search: `docs/src/routes/api/v1.search.json/`
+- Markdown dir: `docs/src/mds/v1/` (with a starter `index.md`)
+
+### 4. Configure your sections
+
+```bash
+# See the current defaults
+bun run docs:sections list
+
+# Remove unneeded ones
+bun run docs:sections remove -- Components
+
+# Add your own
+bun run docs:sections add -- "CLI Reference"
+bun run docs:sections add -- Features
+```
+
+### 5. Update the site config
+
+Edit `docs/src/lib/site-config.json`  change the **name**, **description**, **URL**, **keywords**, and **license** to match your product.
+
+### 6. Update branding assets
+
+Replace the images in `docs/static/`:
+- `favicon.png`  your product's favicon
+- `logo-small.png` & `logo-small-dark.png`  your product's logo
+
+### 7. Write your markdown
+
+Create `.md` files under `docs/src/mds/v1/`. At minimum you need:
+- `index.md`  landing page (must have `currentVersion: 1.0.0` in frontmatter)
+- Any other pages (e.g., `getting-started.md`, `configuration.md`)
+
+Each file needs frontmatter:
+
+```markdown
+---
+title: Getting Started
+description: A quick guide to get started.
+section: Overview
+---
+
+Content here using Markdown and Svelte components.
+```
+
+### 8. Update the search index
+
+Edit `docs/src/routes/api/v1.search.json/search.json` with search data for all your pages.
+
+### 9. Sync everything
+
+```bash
+bun run docs:version:sync
+```
+
+### 10. Preview and build
+
+```bash
+# Run the dev server
+bun run dev
+
+# Build the static site
+bun run build
+```
+
+The static output goes to `docs/build/` and can be deployed anywhere (GitHub Pages, Netlify, etc.).
+
+---
 
 # Prereq
-- Bun >= v1.3.9
 
-# Required manual prep
-- adjust images in docs/static folder 
-  - favicon and product images
-  - adjust `logo-small.png` & `logo-small-dark.png` files to suit the product
+- **Bun** >= v1.3.9
 
-# Commands 
-- Install deps - `bun i` from root workspace
-- Build required artifacts for dev server (only first time) - `bun run build` from root workspace
-- Run dev server - `bun run dev` from root workspace
-- Build static website - `bun run build` from root workspace
+# Commands (from root workspace)
+
+| Command | Description |
+|---------|-------------|
+| `bun i` | Install all dependencies |
+| `bun run build` | Build artifacts (first time) or static site |
+| `bun run dev` | Start the dev server |
+| `bun run docs:version:add -- v<N>` | Add a new version |
+| `bun run docs:version:remove -- v<N>` | Remove a version |
+| `bun run docs:version:sync` | Sync all versions |
+| `bun run docs:sections list` | List all sections |
+| `bun run docs:sections add -- <name>` | Add a section |
+| `bun run docs:sections remove -- <name>` | Remove a section |
+| `bun run lint` | Run Biome linter |
+| `bun run format` | Run Biome formatter |
 
 ## Version Management
 
@@ -33,7 +165,7 @@ bun run docs:version:add -- --copy v3
 # Remove a version (v1 is protected from removal)
 bun run docs:version:remove -- v3
 
-# Sync all versions — ensures every versioned route has its
+# Sync all versions  ensures every versioned route has its
 # corresponding mds folder with index.md and search.json endpoint
 bun run docs:version:sync
 
@@ -114,8 +246,9 @@ Finds and removes a section from the `sections` array in `docs/velite.config.js`
   - All config can be found at `docs/src/lib/site-config.json`
   - When creating doc for a particular product, use this config
   
-# How to create brand new doc using this codebase? 
-    - See NEW-DOC.md
+# How to create brand new doc using this codebase?
+
+Follow the [Turning it into your own docs](#turning-it-into-your-own-docs) section above. For a condensed reference, see [NEW-DOC.md](./NEW-DOC.md).
 
 # Linting & formatting
 - Biome for linting and formatting. Its WIP, so PRs are welcome
@@ -168,6 +301,3 @@ All documentation items from `docs/src/mds/v1` have been extracted into `.skills
 ```
 button, callout, card, card-container, card-grid, checkbox, collapsible, input, native-select, prop-field, select, steps, switch, tabs, textarea, navigation, search, theme, getting-started, introduction, images-and-assets
 ```
-
-# TODO
-- Make Penbot more easy for everyone to just get started with

@@ -1,6 +1,19 @@
-@import "./shared.css";
 
-:root {
+[data-theme="cyan"] {
+	/* Scale palette */
+	--theme-color-current-50: var(--color-cyan-50);
+	--theme-color-current-100: var(--color-cyan-100);
+	--theme-color-current-200: var(--color-cyan-200);
+	--theme-color-current-300: var(--color-cyan-300);
+	--theme-color-current-400: var(--color-cyan-400);
+	--theme-color-current-500: var(--color-cyan-500);
+	--theme-color-current-600: var(--color-cyan-600);
+	--theme-color-current-700: var(--color-cyan-700);
+	--theme-color-current-800: var(--color-cyan-800);
+	--theme-color-current-900: var(--color-cyan-900);
+	--theme-color-current-950: var(--color-cyan-950);
+
+	/* Brand colors */
 	--theme-color-brand-50: var(--color-cyan-50);
 	--theme-color-brand-100: var(--color-cyan-100);
 	--theme-color-brand-200: var(--color-cyan-200);
@@ -23,7 +36,8 @@
 	--theme-color-brand-code-link-hover: var(--theme-color-brand-500);
 }
 
-.dark {
+[data-theme="cyan"].dark,
+.dark [data-theme="cyan"] {
 	--theme-color-brand: var(--theme-color-brand-300);
 	--theme-color-brand-border: var(--theme-color-brand-400);
 	--theme-color-brand-hover: var(--theme-color-brand-200);

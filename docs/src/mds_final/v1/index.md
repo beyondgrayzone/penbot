@@ -5,16 +5,16 @@
 
 ![OG](/penbot.png)
 
-[Getting Started](/docs/v1/getting-started)
+[Getting Started](/docs/v1/getting-started) · [GitHub](https://github.com/beyondgrayzone/penbot)
 
-Penbot is a utility and reference codebase for building documentation sites using Sveltekit. 
+Penbot is a utility and reference codebase for building documentation sites using SvelteKit.
 
-## Features
+## Key Features
 
-- **Bun**. Project builds fast using bun
-- **Tailwind v4**. Tailwind CSS v4 is used for styling
-- **Markdown & Svelte**. Write docs using Markdown and Svelte components
-- **Light & dark mode**. Toggle between light and dark mode
-- **Pre-built components**. For complext layouts use built-in components like Tabs, Cards etc
-- **Syntax highlighting**. Code blocks are automatically highlighted
-- **SEO-friendly**. Meta tags and Open Graph support out of the box
+- **Bun**  Fast project builds
+- **Tailwind v4**  Utility-first styling
+- **Markdown & Svelte**  Write docs in MD with Svelte components
+- **Light & dark mode**  Built-in theme toggle
+- **Pre-built components**  Tabs, Cards, Callouts, and more
+- **Syntax highlighting**  Automatic code block highlighting
+- **SEO-friendly**  Meta tags and Open Graph support

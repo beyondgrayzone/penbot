@@ -1,6 +1,19 @@
-@import "./shared.css";
 
-:root {
+[data-theme="lime"] {
+	/* Scale palette */
+	--theme-color-current-50: var(--color-lime-50);
+	--theme-color-current-100: var(--color-lime-100);
+	--theme-color-current-200: var(--color-lime-200);
+	--theme-color-current-300: var(--color-lime-300);
+	--theme-color-current-400: var(--color-lime-400);
+	--theme-color-current-500: var(--color-lime-500);
+	--theme-color-current-600: var(--color-lime-600);
+	--theme-color-current-700: var(--color-lime-700);
+	--theme-color-current-800: var(--color-lime-800);
+	--theme-color-current-900: var(--color-lime-900);
+	--theme-color-current-950: var(--color-lime-950);
+
+	/* Brand colors */
 	--theme-color-brand-50: var(--color-lime-50);
 	--theme-color-brand-100: var(--color-lime-100);
 	--theme-color-brand-200: var(--color-lime-200);
@@ -23,7 +36,8 @@
 	--theme-color-brand-code-link-hover: var(--theme-color-brand-500);
 }
 
-.dark {
+[data-theme="lime"].dark,
+.dark [data-theme="lime"] {
 	--theme-color-brand: var(--theme-color-brand-400);
 	--theme-color-brand-border: var(--theme-color-brand-500);
 	--theme-color-brand-hover: var(--theme-color-brand-300);

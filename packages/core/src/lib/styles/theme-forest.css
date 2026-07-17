@@ -1,0 +1,64 @@
+
+[data-theme="forest"] {
+	/* FOREST GREEN THEME (Hue: 165) */
+	--theme-color-current-50: oklch(98.5% 0.01 165);
+	--theme-color-current-100: oklch(95.0% 0.03 165);
+	--theme-color-current-200: oklch(90.0% 0.06 165);
+	--theme-color-current-300: oklch(82.0% 0.09 165);
+	--theme-color-current-400: oklch(72.0% 0.12 165);
+	--theme-color-current-500: oklch(62.0% 0.15 165);
+	--theme-color-current-600: oklch(52.0% 0.16 165);
+	--theme-color-current-700: oklch(42.0% 0.14 165);
+	--theme-color-current-800: oklch(32.0% 0.11 165);
+	--theme-color-current-900: oklch(22.0% 0.08 165);
+	--theme-color-current-950: oklch(14.0% 0.06 165);
+
+	/* Base UI mapping */
+	--theme-color-background: var(--theme-color-current-50);
+	--theme-color-background-secondary: var(--theme-color-current-100);
+	--theme-color-foreground: var(--theme-color-current-950);
+	--theme-color-muted: var(--theme-color-current-200);
+	--theme-color-muted-foreground: var(--theme-color-current-700);
+	--theme-color-border: var(--theme-color-current-200);
+
+	/* Primary Actions */
+	--theme-color-primary: var(--theme-color-current-600);
+	--theme-color-primary-foreground: oklch(99% 0.01 165);
+	--theme-color-primary-hover: var(--theme-color-current-700);
+	--theme-color-primary-active: var(--theme-color-current-800);
+
+	/* Secondary & Accent - Soft Sage */
+	--theme-color-secondary: oklch(92% 0.02 165);
+	--theme-color-secondary-foreground: var(--theme-color-current-900);
+	--theme-color-accent: oklch(88% 0.04 165);
+	--theme-color-accent-foreground: var(--theme-color-current-900);
+
+	/* Feedback */
+	--theme-color-destructive: oklch(0.577 0.245 27.325);
+	--theme-color-destructive-foreground: oklch(98% 0.01 27);
+	--theme-color-destructive-border: oklch(0.505 0.213 27.518);
+}
+
+[data-theme="forest"].dark,
+.dark [data-theme="forest"] {
+	--theme-color-background: var(--theme-color-current-950);
+	--theme-color-background-secondary: oklch(10% 0.04 165);
+	--theme-color-foreground: oklch(95% 0.02 165);
+	--theme-color-muted: oklch(25% 0.04 165);
+	--theme-color-muted-foreground: oklch(75% 0.03 165);
+	--theme-color-destructive: oklch(0.45 0.18 27.3);
+	--theme-color-destructive-foreground: var(--theme-color-foreground);
+	--theme-color-border: var(--theme-color-current-800);
+
+	/* Primary Actions Dark */
+	--theme-color-primary: var(--theme-color-current-900);
+	--theme-color-primary-hover: var(--theme-color-current-700);
+	--theme-color-primary-active: var(--theme-color-current-700);
+	--theme-color-primary-foreground: var(--theme-color-current-950);
+
+	/* Secondary & Accent Dark */
+	--theme-color-secondary: oklch(22% 0.04 165);
+	--theme-color-secondary-foreground: oklch(90% 0.02 165);
+	--theme-color-accent: oklch(30% 0.06 165);
+	--theme-color-accent-foreground: oklch(98% 0.01 165);
+}
