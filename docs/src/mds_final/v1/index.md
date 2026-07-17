@@ -1,13 +1,13 @@
 # Introduction
-> What is Bladocs?
+> What is Penbot?
 
 
 
-![OG](/bladocs.png)
+![OG](/penbot.png)
 
 [Getting Started](/docs/v1/getting-started)
 
-Bladocs is a utility and reference codebase for building documentation sites using Sveltekit. 
+Penbot is a utility and reference codebase for building documentation sites using Sveltekit. 
 
 ## Features
 

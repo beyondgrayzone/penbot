@@ -7,7 +7,7 @@
 
 ```svelte title="document.md"
 <script>
-	import { Select } from "@bladocs/core";
+	import { Select } from "@penbot/core";
 </script>
 
 <Select>

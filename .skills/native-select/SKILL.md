@@ -1,6 +1,6 @@
 # NativeSelect
 
-**Import:** `import { NativeSelect, Label } from "@bladocs/core";`
+**Import:** `import { NativeSelect, Label } from "@penbot/core";`
 
 ## Usage
 

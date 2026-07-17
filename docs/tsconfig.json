@@ -3,8 +3,8 @@
 	"compilerOptions": {
 		// "baseUrl": ".",
 		//   "paths": {
-		//   "@bladocs/core": ["../packages/core/src/lib"],
-		//   "@bladocs/core/*": ["../packages/core/src/lib/*"]
+		//   "@penbot/core": ["../packages/core/src/lib"],
+		//   "@penbot/core/*": ["../packages/core/src/lib/*"]
 		// },
 		"composite": true,
 		"types": [

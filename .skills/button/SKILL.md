@@ -1,6 +1,6 @@
 # Button
 
-**Import:** `import { Button } from "@bladocs/core";`
+**Import:** `import { Button } from "@penbot/core";`
 
 ## Usage
 

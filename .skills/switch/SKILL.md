@@ -1,6 +1,6 @@
 # Switch
 
-**Import:** `import { Switch } from "@bladocs/core";`
+**Import:** `import { Switch } from "@penbot/core";`
 
 ## Usage
 

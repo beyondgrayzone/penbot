@@ -5,7 +5,7 @@ section: Components
 ---
 
 <script>
-	import { Tabs, TabItem, Callout, PropField } from "@bladocs/core";
+	import { Tabs, TabItem, Callout, PropField } from "@penbot/core";
 	const itemsA = ["First tab", "Second tab"];
 	const itemsB = ["+page.svelte", "+page.server.ts"];
 </script>
@@ -16,7 +16,7 @@ You can use the `Tabs` and `TabItem` components to create tabbed interfaces. A `
 
 ```svelte title="document.md"
 <script>
-	import { Tabs, TabItem } from "@bladocs/core";
+	import { Tabs, TabItem } from "@penbot/core";
 	const items = ["First tab", "Second tab"];
 </script>
 
@@ -42,7 +42,7 @@ You can use the `Tabs` and `TabItem` components to create tabbed interfaces. A `
 
 ```svelte
 <script lang="ts">
-	import { Button } from "@bladocs/core";
+	import { Button } from "@penbot/core";
 </script>
 
 <Button onclick={() => alert("Hello!")}>Click me</Button>

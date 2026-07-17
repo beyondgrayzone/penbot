@@ -6,14 +6,14 @@ availableSinceVersion: 1.0.3
 ---
 
 <script>
-	import { Checkbox, Label, CardContainer, NakedContainer } from "@bladocs/core";
+	import { Checkbox, Label, CardContainer, NakedContainer } from "@penbot/core";
 </script>
 
 ## Usage
 
 ```svelte title="document.md"
 <script>
-	import { Checkbox } from "@bladocs/core";
+	import { Checkbox } from "@penbot/core";
 </script>
 
 <Checkbox />

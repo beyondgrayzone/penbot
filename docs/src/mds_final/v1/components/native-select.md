@@ -9,7 +9,7 @@ The `NativeSelect` component is a styled native select component that you can us
 
 ```svelte title="document.md"
 <script>
-	import { NativeSelect } from "@bladocs/core";
+	import { NativeSelect } from "@penbot/core";
 </script>
 
 <NativeSelect>

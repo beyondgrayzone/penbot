@@ -45,7 +45,7 @@ export class CopyToClipboard {
 	};
 }
 
-const COPY_TO_CLIPBOARD_KEY = Symbol("bladocs-copy-to-clipboard");
+const COPY_TO_CLIPBOARD_KEY = Symbol("penbot-copy-to-clipboard");
 
 export function setCopyToClipboard(props?: CopyToClipboardProps) {
 	return setContext(COPY_TO_CLIPBOARD_KEY, new CopyToClipboard(props));

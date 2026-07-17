@@ -1,5 +1,5 @@
 {
-	"name": "@bladocs/core",
+	"name": "@penbot/core",
 	"version": "0.0.1",
 	"scripts": {
 		"build": "bun --bun run package",
@@ -21,7 +21,7 @@
 	"type": "module",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/bladocs_eco/bladocs",
+		"url": "https://github.com/penbot_eco/penbot",
 		"directory": "packages/core"
 	},
 	"exports": {
@@ -74,7 +74,7 @@
 		"@types/hast": "^3.0.4",
 		"@types/mdast": "^4.0.4",
 		"@types/node": "catalog:",
-		"@bladocs/mdsx": "workspace:*",
+		"@penbot/mdsx": "workspace:*",
 		"publint": "^0.3.2",
 		"svelte": "catalog:",
 		"svelte-check": "catalog:",

@@ -1,6 +1,6 @@
 # CardContainer
 
-**Import:** `import { CardContainer } from "@bladocs/core";`
+**Import:** `import { CardContainer } from "@penbot/core";`
 
 ## Usage
 

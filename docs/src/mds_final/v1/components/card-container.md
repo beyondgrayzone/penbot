@@ -9,7 +9,7 @@ Often times you'll want to display some demo/example components in a container. 
 
 ```svelte title="document.md"
 <script>
-	import { CardContainer, Button } from "@bladocs/ui";
+	import { CardContainer, Button } from "@penbot/ui";
 </script>
 
 <CardContainer class="flex flex-wrap gap-4">

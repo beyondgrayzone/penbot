@@ -9,7 +9,7 @@ You can use the `Tabs` and `TabItem` components to create tabbed interfaces. A `
 
 ```svelte title="document.md"
 <script>
-	import { Tabs, TabItem } from "@bladocs/core";
+	import { Tabs, TabItem } from "@penbot/core";
 	const items = ["First tab", "Second tab"];
 </script>
 
@@ -39,7 +39,7 @@ This is the second tab's content.
 ### +page.svelte
 ```svelte
 <script lang="ts">
-	import { Button } from "@bladocs/core";
+	import { Button } from "@penbot/core";
 </script>
 
 <Button onclick={() => alert("Hello!")}>Click me</Button>

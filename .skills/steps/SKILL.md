@@ -1,6 +1,6 @@
 # Steps
 
-**Import:** `import { Steps, Step } from "@bladocs/core";`
+**Import:** `import { Steps, Step } from "@penbot/core";`
 
 ## Usage
 
@@ -13,7 +13,7 @@ Display a sequential series of steps.
   You can install via `npm` or `pnpm`.
   
   ```bash
-  npm install @bladocs/ui
+  npm install @penbot/ui
   ```
   
   <Step>Start your engines</Step>

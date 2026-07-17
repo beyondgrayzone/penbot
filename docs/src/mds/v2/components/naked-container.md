@@ -7,7 +7,7 @@ order: -2
 ---
 
 <script>
-	import { NakedContainer, Button } from "@bladocs/core";
+	import { NakedContainer, Button } from "@penbot/core";
 </script>
 
 Often times you'll want to render components themselves in a container. The `NakedContainer` component allows to do exactly that.
@@ -16,7 +16,7 @@ Often times you'll want to render components themselves in a container. The `Nak
 
 ```svelte title="document.md"
 <script>
-	import { NakedContainer, Button } from "@bladocs/ui";
+	import { NakedContainer, Button } from "@penbot/ui";
 </script>
 
 <NakedContainer class="flex flex-wrap gap-4">

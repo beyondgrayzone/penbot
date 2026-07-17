@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/state";
-	import { DocsLayout } from "@bladocs/core";
+	import { DocsLayout } from "@penbot/core";
 
 	import { navigationWithVersion, navigation } from "$lib/navigation";
 	let version = $derived(page.url.pathname.split("/")[2]);

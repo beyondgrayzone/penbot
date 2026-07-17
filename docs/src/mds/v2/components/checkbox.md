@@ -5,14 +5,14 @@ section: Components
 ---
 
 <script>
-	import { Checkbox, CardContainer } from "@bladocs/core";
+	import { Checkbox, CardContainer } from "@penbot/core";
 </script>
 
 ## Usage
 
 ```svelte title="document.md"
 <script>
-	import { Checkbox } from "@bladocs/core";
+	import { Checkbox } from "@penbot/core";
 </script>
 
 <Checkbox />

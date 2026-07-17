@@ -7,7 +7,7 @@
 
 ```svelte title="document.md"
 <script>
-	import { Checkbox } from "@bladocs/core";
+	import { Checkbox } from "@penbot/core";
 </script>
 
 <Checkbox />

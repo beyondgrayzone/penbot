@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Select } from "@bladocs/core";
+	import { Select } from "@penbot/core";
 
 	const items = [
 		{

@@ -5,14 +5,14 @@ section: Components
 ---
 
 <script>
-	import { Button, CardContainer } from "@bladocs/core";
+	import { Button, CardContainer } from "@penbot/core";
 </script>
 
 ## Usage
 
 ```svelte title="document.md"
 <script>
-	import { Button } from "@bladocs/core";
+	import { Button } from "@penbot/core";
 </script>
 
 <Button>Default</Button>

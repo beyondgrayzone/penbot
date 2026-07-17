@@ -5,14 +5,14 @@ section: Components
 ---
 
 <script>
-	import { Collapsible, CardContainer, PropField } from "@bladocs/core";
+	import { Collapsible, CardContainer, PropField } from "@penbot/core";
 </script>
 
 ## Usage
 
 ```svelte title="document.md"
 <script>
-	import { Collapsible, CardContainer } from "@bladocs/core";
+	import { Collapsible, CardContainer } from "@penbot/core";
 </script>
 
 <Collapsible title="more info">

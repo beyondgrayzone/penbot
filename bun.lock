@@ -30,7 +30,7 @@
       },
     },
     "docs": {
-      "name": "@bladocs/docs",
+      "name": "@penbot/docs",
       "version": "0.0.0",
       "dependencies": {
         "bits-ui": "catalog:",
@@ -38,8 +38,8 @@
         "tailwind-variants": "catalog:",
       },
       "devDependencies": {
-        "@bladocs/core": "workspace:*",
-        "@bladocs/mdsx": "workspace:*",
+        "@penbot/core": "workspace:*",
+        "@penbot/mdsx": "workspace:*",
         "@sveltejs/kit": "catalog:",
         "@sveltejs/vite-plugin-svelte": "catalog:",
         "@tailwindcss/vite": "catalog:",
@@ -58,7 +58,7 @@
       },
     },
     "packages/core": {
-      "name": "@bladocs/core",
+      "name": "@penbot/core",
       "version": "0.0.1",
       "dependencies": {
         "bits-ui": "catalog:",
@@ -80,7 +80,7 @@
         "unist-util-visit": "^5.0.0",
       },
       "devDependencies": {
-        "@bladocs/mdsx": "workspace:*",
+        "@penbot/mdsx": "workspace:*",
         "@sveltejs/kit": "catalog:",
         "@sveltejs/package": "2.5.0",
         "@sveltejs/vite-plugin-svelte": "catalog:",
@@ -104,14 +104,14 @@
       },
     },
     "packages/mds": {
-      "name": "@bladocs/mds",
+      "name": "@penbot/mds",
       "version": "1.0.0",
       "bin": {
         "mds": "./bin/mds",
       },
     },
     "packages/mdsx": {
-      "name": "@bladocs/mdsx",
+      "name": "@penbot/mdsx",
       "version": "0.0.1",
       "dependencies": {
         "esrap": "^1.2.1",
@@ -172,14 +172,6 @@
     "@biomejs/cli-win32-arm64": ["@biomejs/cli-win32-arm64@2.3.4", "", { "os": "win32", "cpu": "arm64" }, "sha512-5TJ6JfVez+yyupJ/iGUici2wzKf0RrSAxJhghQXtAEsc67OIpdwSKAQboemILrwKfHDi5s6mu7mX+VTCTUydkw=="],
 
     "@biomejs/cli-win32-x64": ["@biomejs/cli-win32-x64@2.3.4", "", { "os": "win32", "cpu": "x64" }, "sha512-FGCijXecmC4IedQ0esdYNlMpx0Jxgf4zceCaMu6fkjWyjgn50ZQtMiqZZQ0Q/77yqPxvtkgZAvt5uGw0gAAjig=="],
-
-    "@bladocs/core": ["@bladocs/core@workspace:packages/core"],
-
-    "@bladocs/docs": ["@bladocs/docs@workspace:docs"],
-
-    "@bladocs/mds": ["@bladocs/mds@workspace:packages/mds"],
-
-    "@bladocs/mdsx": ["@bladocs/mdsx@workspace:packages/mdsx"],
 
     "@changesets/apply-release-plan": ["@changesets/apply-release-plan@7.0.13", "", { "dependencies": { "@changesets/config": "3.1.1", "@changesets/get-version-range-type": "0.4.0", "@changesets/git": "3.0.4", "@changesets/should-skip-package": "0.1.2", "@changesets/types": "6.1.0", "@manypkg/get-packages": "1.1.3", "detect-indent": "6.1.0", "fs-extra": "7.0.1", "lodash.startcase": "4.4.0", "outdent": "0.5.0", "prettier": "2.8.8", "resolve-from": "5.0.0", "semver": "7.7.3" } }, "sha512-BIW7bofD2yAWoE8H4V40FikC+1nNFEKBisMECccS16W1rt6qqhNTBDmIw5HaqmMgtLNz9e7oiALiEUuKrQ4oHg=="],
 
@@ -430,6 +422,14 @@
     "@oxlint/win32-arm64": ["@oxlint/win32-arm64@1.25.0", "", { "os": "win32", "cpu": "arm64" }, "sha512-mpdiXZm2oNuSQAbTEPRDuSeR6v1DCD7Cl/xouR2ggHZu3AKZ4XYmm29hyrzIxrYVoQ/5j+182TGdOpGYn9xQJg=="],
 
     "@oxlint/win32-x64": ["@oxlint/win32-x64@1.25.0", "", { "os": "win32", "cpu": "x64" }, "sha512-opoIACOkcFloWQO6dubBLbcWwW52ML8+3deFdr0WE0PeM9UXdLB0jRMuLsEnplmBoy9TRvmxDJ+Pw8xc2PsOfQ=="],
+
+    "@penbot/core": ["@penbot/core@workspace:packages/core"],
+
+    "@penbot/docs": ["@penbot/docs@workspace:docs"],
+
+    "@penbot/mds": ["@penbot/mds@workspace:packages/mds"],
+
+    "@penbot/mdsx": ["@penbot/mdsx@workspace:packages/mdsx"],
 
     "@polka/url": ["@polka/url@1.0.0-next.29", "", {}, "sha512-wwQAWhWSuHaag8c4q/KN/vCoeOJYshAIvMQwD4GpSb3OiZklFfvAgmj0VCBBImRpuF/aFgIRzllXlVX93Jevww=="],
 

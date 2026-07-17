@@ -1,6 +1,6 @@
 # Tabs
 
-**Import:** `import { Tabs, TabItem } from "@bladocs/core";`
+**Import:** `import { Tabs, TabItem } from "@penbot/core";`
 
 ## Usage
 

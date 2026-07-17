@@ -1,47 +1,47 @@
 ---
 title: Theme
-description: Learn how to customize the theme in your Bladocs project.
+description: Learn how to customize the theme in your Penbot project.
 section: Configuration
 ---
 
-The theme determines the branded color scheme for your site. A theme for each of the TailwindCSS colors is provided by the `@bladocs/core` package. Each theme has been designed to present well in both light and dark mode.
+The theme determines the branded color scheme for your site. A theme for each of the TailwindCSS colors is provided by the `@penbot/core` package. Each theme has been designed to present well in both light and dark mode.
 
 ## Using a theme
 
-To use a theme, import the theme file into your `src/app.css` file _before_ importing the `@bladocs/core/globals.css` file.
+To use a theme, import the theme file into your `src/app.css` file _before_ importing the `@penbot/core/globals.css` file.
 
 ```css
-/* @import "@bladocs/core/theme-orange.css"; */
-@import "@bladocs/core/theme-emerald.css";
-@import "@bladocs/core/globals.css";
+/* @import "@penbot/core/theme-orange.css"; */
+@import "@penbot/core/theme-emerald.css";
+@import "@penbot/core/globals.css";
 ```
 
-It's not recommended to customize the theme to maintain consistency across the UI components that are provided by Bladocs and align with the provided themes.
+It's not recommended to customize the theme to maintain consistency across the UI components that are provided by Penbot and align with the provided themes.
 
 ## Available themes
 
 | Theme name | Import path                        |
 | ---------- | ---------------------------------- |
-| orange     | `@bladocs/core/theme-orange.css`  |
-| green      | `@bladocs/core/theme-green.css`   |
-| blue       | `@bladocs/core/theme-blue.css`    |
-| purple     | `@bladocs/core/theme-purple.css`  |
-| pink       | `@bladocs/core/theme-pink.css`    |
-| lime       | `@bladocs/core/theme-lime.css`    |
-| yellow     | `@bladocs/core/theme-yellow.css`  |
-| cyan       | `@bladocs/core/theme-cyan.css`    |
-| teal       | `@bladocs/core/theme-teal.css`    |
-| violet     | `@bladocs/core/theme-violet.css`  |
-| amber      | `@bladocs/core/theme-amber.css`   |
-| red        | `@bladocs/core/theme-red.css`     |
-| sky        | `@bladocs/core/theme-sky.css`     |
-| emerald    | `@bladocs/core/theme-emerald.css` |
-| fuchsia    | `@bladocs/core/theme-fuchsia.css` |
-| rose       | `@bladocs/core/theme-rose.css`    |
+| orange     | `@penbot/core/theme-orange.css`  |
+| green      | `@penbot/core/theme-green.css`   |
+| blue       | `@penbot/core/theme-blue.css`    |
+| purple     | `@penbot/core/theme-purple.css`  |
+| pink       | `@penbot/core/theme-pink.css`    |
+| lime       | `@penbot/core/theme-lime.css`    |
+| yellow     | `@penbot/core/theme-yellow.css`  |
+| cyan       | `@penbot/core/theme-cyan.css`    |
+| teal       | `@penbot/core/theme-teal.css`    |
+| violet     | `@penbot/core/theme-violet.css`  |
+| amber      | `@penbot/core/theme-amber.css`   |
+| red        | `@penbot/core/theme-red.css`     |
+| sky        | `@penbot/core/theme-sky.css`     |
+| emerald    | `@penbot/core/theme-emerald.css` |
+| fuchsia    | `@penbot/core/theme-fuchsia.css` |
+| rose       | `@penbot/core/theme-rose.css`    |
 
 ## Tailwind Variables
 
-Bladocs uses TailwindCSS to style the UI components and provides a set of Tailwind variables that can be used to style your examples/custom components.
+Penbot uses TailwindCSS to style the UI components and provides a set of Tailwind variables that can be used to style your examples/custom components.
 
 ### Gray
 

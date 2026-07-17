@@ -1,6 +1,6 @@
 # CardGrid
 
-**Import:** `import { CardGrid, Card } from "@bladocs/core";`
+**Import:** `import { CardGrid, Card } from "@penbot/core";`
 
 ## Usage
 

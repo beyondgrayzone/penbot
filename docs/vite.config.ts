@@ -9,10 +9,10 @@ const __dirname = new URL(".", import.meta.url).pathname;
 export default defineConfig({
 	plugins: [tailwindcss(), sveltekit(), devToolsJson()],
 	optimizeDeps: {
-		exclude: ["@bladocs/core"],
+		exclude: ["@penbot/core"],
 	},
 	ssr: {
-		noExternal: ["@bladocs/core"],
+		noExternal: ["@penbot/core"],
 	},
 	server: {
 		host: process.env.VITE_HOST || undefined,

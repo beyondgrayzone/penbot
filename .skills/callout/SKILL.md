@@ -1,6 +1,6 @@
 # Callout
 
-**Import:** `import { Callout } from "@bladocs/core";`
+**Import:** `import { Callout } from "@penbot/core";`
 
 ## Usage
 

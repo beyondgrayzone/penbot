@@ -7,7 +7,7 @@
 
 ```svelte title="document.md"
 <script>
-	import { Switch } from "@bladocs/core";
+	import { Switch } from "@penbot/core";
 </script>
 
 <Switch />

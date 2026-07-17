@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { DocPage } from "@bladocs/core";
+	import { DocPage } from "@penbot/core";
 	let { data } = $props();
 </script>
 

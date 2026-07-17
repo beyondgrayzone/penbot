@@ -1,5 +1,5 @@
-# What is Bladocs?
-- This repo is Bladocs
+# What is Penbot?
+- This repo is Penbot
 - This repo exhibits an example of using Sveltekit as means to create static documentation sites
 - This repo is not a framework, just clone it and start changing stuff to make it yours
 - Once you make it yours, make approriate changes to this README.md file
@@ -21,7 +21,7 @@
 
 ## Version Management
 
-Versions are managed via `@bladocs/mds` Go tool. Available commands:
+Versions are managed via `@penbot/mds` Go tool. Available commands:
 
 ```bash
 # Add a new version from scratch (e.g. v3)
@@ -75,14 +75,14 @@ Finds and removes a section from the `sections` array in `docs/velite.config.js`
   - docs contains the main markdown files inside `src/mds` directory
   - docs also contains the sanitized version of the above inside `src/mds_final` directory (Used for clipboard)
 
-### packages/core contains the scaffolding code for the bladocs framework. This folder should not be touched
+### packages/core contains the scaffolding code for the penbot framework. This folder should not be touched
 
 ### packages/mds is a Go program that provides:
   - **Markdown sanitization**: strips HTML/Svelte component tags from markdown to render clean text (used for clipboard). See `runProcessMds` function in `process.ts` file.
   - **Version management**: add, remove, and sync documentation versions (see [Version Management](#version-management))
   - **Section listing**: list documentation sections from the velite config (see [sections](#sections))
 
-### packages/mdsx is the markdown processor sveltekit plugin that converts svelte snippets to html code for bladocs. This folder should not be touched
+### packages/mdsx is the markdown processor sveltekit plugin that converts svelte snippets to html code for penbot. This folder should not be touched
 
 # How it works?
 
@@ -98,7 +98,7 @@ Finds and removes a section from the `sections` array in `docs/velite.config.js`
         ```
         ---
         title: Getting Started
-        description: A quick guide to get started using Bladocs
+        description: A quick guide to get started using Penbot
         section: Overview
         ---
         ```
@@ -170,4 +170,4 @@ button, callout, card, card-container, card-grid, checkbox, collapsible, input, 
 ```
 
 # TODO
-- Make Bladocs more easy for everyone to just get started with
+- Make Penbot more easy for everyone to just get started with

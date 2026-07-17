@@ -5,14 +5,14 @@ section: Components
 ---
 
 <script>
-	import { Switch, CardContainer } from "@bladocs/core";
+	import { Switch, CardContainer } from "@penbot/core";
 </script>
 
 ## Usage
 
 ```svelte title="document.md"
 <script>
-	import { Switch } from "@bladocs/core";
+	import { Switch } from "@penbot/core";
 </script>
 
 <Switch />

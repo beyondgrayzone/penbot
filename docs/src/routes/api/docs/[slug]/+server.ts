@@ -26,7 +26,7 @@ export async function GET({ params }) {
 	const filePath = `/src/mds/${midPath}.md`;
 	const finalFilePath = `/src/mds_final/${midPath}.md`;
 
-	const WORKSPACE = "@bladocs/mds";
+	const WORKSPACE = "@penbot/mds";
 	const INPUT_FILE = filePath;
 	const OUTPUT_FILE = finalFilePath;
 

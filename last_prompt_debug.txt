@@ -1,0 +1,4 @@
+=== FINAL CONTEXT WINDOW SENT TO LLM ===
+[0] ROLE: user
+CONTENT: Run `bun install` and find the issue
+

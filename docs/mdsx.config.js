@@ -1,5 +1,5 @@
-import { defineConfig } from "@bladocs/mdsx";
-import { baseRemarkPlugins, baseRehypePlugins } from "@bladocs/core/mdsxConfig";
+import { defineConfig } from "@penbot/mdsx";
+import { baseRemarkPlugins, baseRehypePlugins } from "@penbot/core/mdsxConfig";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 

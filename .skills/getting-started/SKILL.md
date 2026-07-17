@@ -3,7 +3,7 @@
 ## Clone the starter
 
 ```bash
-pnpx degit bladocs_eco/bladocs/start
+pnpx degit penbot_eco/penbot/start
 ```
 
 ## Navigation setup
@@ -11,7 +11,7 @@ pnpx degit bladocs_eco/bladocs/start
 Edit `src/lib/navigation.ts`:
 
 ```ts
-import { defineNavigation } from "@bladocs/core";
+import { defineNavigation } from "@penbot/core";
 export const navigation = defineNavigation({ /* customize */ });
 ```
 
@@ -20,7 +20,7 @@ export const navigation = defineNavigation({ /* customize */ });
 Edit `src/lib/site-config.ts`:
 
 ```ts
-import { defineSiteConfig } from "@bladocs/core";
+import { defineSiteConfig } from "@penbot/core";
 export const siteConfig = defineSiteConfig({
   title: "Bladocs",
   description: "A SvelteKit docs starter template",
@@ -36,8 +36,8 @@ Override per-route with `useSiteConfig` hook.
 In `src/app.css`:
 
 ```css
-@import "@bladocs/core/themes/emerald.css";
-@import "@bladocs/core/globals.css";
+@import "@penbot/core/themes/emerald.css";
+@import "@penbot/core/globals.css";
 ```
 
 ## Logo

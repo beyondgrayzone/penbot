@@ -1,6 +1,6 @@
 # Checkbox
 
-**Import:** `import { Checkbox, Label } from "@bladocs/core";`
+**Import:** `import { Checkbox, Label } from "@penbot/core";`
 
 ## Usage
 

@@ -1,6 +1,6 @@
-# How to Create a Brand New Documentation Site from Bladocs
+# How to Create a Brand New Documentation Site from Penbot
 
-This guide documents the minimal, working steps to take the Bladocs starter and turn it into documentation for your own product (e.g., NoteBox, a CLI tool, an API, etc.).
+This guide documents the minimal, working steps to take the Penbot starter and turn it into documentation for your own product (e.g., NoteBox, a CLI tool, an API, etc.).
 
 ---
 
@@ -123,7 +123,7 @@ This ensures all routes, mds folders, and search endpoints are consistent and up
 
 > I want to create documentation for **{ProductName}**, a {one-line description}.
 >
-> Using the Bladocs codebase:
+> Using the Penbot codebase:
 >
 > 1. Remove all existing documentation versions (v1, v2, etc.) using `bun run docs:version:remove -- v2` then `-- v1`.
 > 2. Add a fresh v1 using `bun run docs:version:add -- v1`.

@@ -5,7 +5,7 @@ section: Components
 ---
 
 <script>
-	import { Select, CardContainer } from "@bladocs/core";
+	import { Select, CardContainer } from "@penbot/core";
 	import SelectDemo from "$lib/components/demos/select-demo.svelte";
 </script>
 
@@ -13,7 +13,7 @@ section: Components
 
 ```svelte title="document.md"
 <script>
-	import { Select } from "@bladocs/core";
+	import { Select } from "@penbot/core";
 </script>
 
 <Select>

@@ -1,6 +1,6 @@
 # PropField
 
-**Import:** `import { PropField } from "@bladocs/core";`
+**Import:** `import { PropField } from "@penbot/core";`
 
 ## Usage
 

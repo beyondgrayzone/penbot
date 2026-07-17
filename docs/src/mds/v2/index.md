@@ -1,19 +1,19 @@
 ---
 title: Introduction v2
-description: What is Bladocs?
+description: What is Penbot?
 section: Overview
 currentVersion: 2.0.1
 ---
 
 <script>
-	import { Callout } from '@bladocs/core'
+	import { Callout } from '@penbot/core'
 </script>
 
-![OG](/bladocs.png)
+![OG](/penbot.png)
 
 [Getting Started v2](/docs/v2/getting-started)
 
-Bladocs is a utility and reference codebase for building documentation sites using Sveltekit. 
+Penbot is a utility and reference codebase for building documentation sites using Sveltekit. 
 
 ## Features
 

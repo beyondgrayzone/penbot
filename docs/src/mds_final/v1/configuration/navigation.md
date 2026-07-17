@@ -1,10 +1,10 @@
 # Navigation
-> Learn how to customize the navigation in your Bladocs project.
+> Learn how to customize the navigation in your Penbot project.
 
 
 Navigation is a key component of every site, documenting the structure of your site and providing a clear path for users to navigate through your content.
 
-Bladocs comes with a navigation structure that is designed to be flexible and customizable. Each page in your site should have a corresponding navigation item, and the navigation items should be nested according to their hierarchy.
+Penbot comes with a navigation structure that is designed to be flexible and customizable. Each page in your site should have a corresponding navigation item, and the navigation items should be nested according to their hierarchy.
 
 ## Navigation Structure
 

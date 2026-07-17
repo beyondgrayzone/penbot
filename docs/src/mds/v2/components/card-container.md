@@ -5,7 +5,7 @@ section: Components
 ---
 
 <script>
-	import { CardContainer, Button } from "@bladocs/core";
+	import { CardContainer, Button } from "@penbot/core";
 </script>
 
 Often times you'll want to display some demo/example components in a container. The `CardContainer` component is a great way to do this, as it aligns effortlessly with the rest of the docs theme.
@@ -14,7 +14,7 @@ Often times you'll want to display some demo/example components in a container. 
 
 ```svelte title="document.md"
 <script>
-	import { CardContainer, Button } from "@bladocs/ui";
+	import { CardContainer, Button } from "@penbot/ui";
 </script>
 
 <CardContainer class="flex flex-wrap gap-4">

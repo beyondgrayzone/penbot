@@ -50,7 +50,7 @@ var rxVersion = regexp.MustCompile(`^v\d+$`)
 // ---------------------------------------------------------------------------
 
 const pageSvelteTmpl = `<script lang="ts">
-	import { DocPage } from "@bladocs/core";
+	import { DocPage } from "@penbot/core";
 	let { data } = $props();
 </script>
 

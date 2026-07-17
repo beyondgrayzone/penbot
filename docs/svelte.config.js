@@ -1,5 +1,5 @@
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
-import { mdsx } from "@bladocs/mdsx";
+import { mdsx } from "@penbot/mdsx";
 import mdsxConfig from "./mdsx.config.js";
 import adapter from "@sveltejs/adapter-static";
 
@@ -19,7 +19,7 @@ const config = {
 		alias: {
 			"$content/*": ".velite/*",
 			"@/*": "src/*",
-			// "@bladocs/core/*": "../packages/core/src/lib/*",
+			// "@penbot/core/*": "../packages/core/src/lib/*",
 		},
 		adapter: adapter({
 			pages: "build",

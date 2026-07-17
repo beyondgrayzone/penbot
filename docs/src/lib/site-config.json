@@ -1,14 +1,14 @@
 {
-	"name": "Bladocs",
+	"name": "Penbot",
 	"siteLink": "/",
-	"url": "https://bladocs.codelinter.com",
+	"url": "https://penbot.codelinter.com",
 	"ogImage": {
-		"url": "https://docs.bladocs.dev/bladocs.png",
+		"url": "https://docs.penbot.dev/penbot.png",
 		"height": "630",
 		"width": "1200"
 	},
-	"description": "Documentation toolkit for Bladocs .",
-	"keywords": ["bladocs_eco", "sveltekit", "documentation", "docs"],
+	"description": "Documentation toolkit for Penbot .",
+	"keywords": ["penbot_eco", "sveltekit", "documentation", "docs"],
 	"license": {
 		"name": "SomeLicense",
 		"urll": "https://yourwebite.com/LICENSE"

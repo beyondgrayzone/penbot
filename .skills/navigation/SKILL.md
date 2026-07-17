@@ -2,12 +2,12 @@
 
 **File:** `src/lib/navigation.ts`
 
-**Import:** `import { defineNavigation } from "@bladocs/core";`
+**Import:** `import { defineNavigation } from "@penbot/core";`
 
 ## Usage
 
 ```ts
-import { defineNavigation } from "@bladocs/core";
+import { defineNavigation } from "@penbot/core";
 
 export const navigation = defineNavigation({
   // Customize the navigation here

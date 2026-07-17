@@ -1,6 +1,6 @@
 # Collapsible
 
-**Import:** `import { Collapsible } from "@bladocs/core";`
+**Import:** `import { Collapsible } from "@penbot/core";`
 
 ## Usage
 

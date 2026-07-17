@@ -1,6 +1,6 @@
 # Textarea
 
-**Import:** `import { Textarea, Label } from "@bladocs/core";`
+**Import:** `import { Textarea, Label } from "@penbot/core";`
 
 ## Usage
 

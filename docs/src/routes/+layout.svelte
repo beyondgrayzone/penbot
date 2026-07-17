@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { siteConfig } from "$lib/site-config";
 	import "../app.css";
-	import { useSiteConfig } from "@bladocs/core";
+	import { useSiteConfig } from "@penbot/core";
 	import { ModeWatcher } from "mode-watcher";
 
 	let { children } = $props();

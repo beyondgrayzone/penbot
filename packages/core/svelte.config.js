@@ -5,7 +5,7 @@ const config = {
 	kit: {
 		alias: {
 			"@/*": "./*",
-			// "@bladocs/core/*": "../packages/core/src/lib/*",
+			// "@penbot/core/*": "../packages/core/src/lib/*",
 		},
 	},
 	preprocess: vitePreprocess(),

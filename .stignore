@@ -1,6 +1,0 @@
-.git/
-node_modules
-.svelte-kit/*
-!.svelte-kit/tsconfig.json
-dist/
-build/

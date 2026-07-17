@@ -13,7 +13,7 @@ docs/static/
 ├── android-chrome-192x192.png
 ├── android-chrome-512x512.png
 ├── site.webmanifest         # PWA manifest
-├── bladocs.png              # OG image (social sharing)
+├── penbot.png              # OG image (social sharing)
 ├── logo-small.png           # Sidebar logo (light mode)
 ├── logo-small-dark.png      # Sidebar logo (dark mode)
 ├── logo-light.svg           # Full logo light variant
@@ -25,7 +25,7 @@ docs/static/
 Use standard Markdown image syntax — images in `docs/static/` are accessible at the root `/`:
 
 ```md
-![Alt text](/bladocs.png)
+![Alt text](/penbot.png)
 ![Alt text](/my-image.png)
 ```
 

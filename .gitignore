@@ -103,9 +103,7 @@ web_modules/
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
-packages/cli/dist
-dist/
-dist
+packages/core/dist
 generated-assets
 
 # JetBrains IDEs
@@ -117,5 +115,4 @@ docs/.wrangler
 start/.wrangler
 start/public
 
-.stfolder
 .kit/strictMode.json

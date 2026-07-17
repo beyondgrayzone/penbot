@@ -1,6 +1,6 @@
 # Input
 
-**Import:** `import { Input, Label } from "@bladocs/core";`
+**Import:** `import { Input, Label } from "@penbot/core";`
 
 ## Usage
 

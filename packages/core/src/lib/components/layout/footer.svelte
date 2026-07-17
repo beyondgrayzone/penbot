@@ -1,6 +1,6 @@
 <script lang="ts">
 	import SocialIcons from "../social-icons.svelte";
-	import { useSiteConfig } from "@bladocs/core";
+	import { useSiteConfig } from "@penbot/core";
 
 	const siteConfig = useSiteConfig();
 	let siteName = siteConfig.current.name;

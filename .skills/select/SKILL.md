@@ -1,6 +1,6 @@
 # Select
 
-**Import:** `import { Select } from "@bladocs/core";`
+**Import:** `import { Select } from "@penbot/core";`
 
 ## Usage
 

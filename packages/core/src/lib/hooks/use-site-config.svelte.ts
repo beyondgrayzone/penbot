@@ -32,7 +32,7 @@ class SiteConfigState {
 	constructor(readonly getProps: () => SiteConfig) {}
 }
 
-const SITE_CONFIG_KEY = Symbol("bladocs-site-config");
+const SITE_CONFIG_KEY = Symbol("penbot-site-config");
 
 export function useSiteConfig(getProps?: () => SiteConfig): SiteConfigState {
 	if (getProps) {

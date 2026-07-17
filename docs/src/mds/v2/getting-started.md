@@ -1,23 +1,23 @@
 ---
 title: Getting Started
-description: A quick guide to get started using Bladocs
+description: A quick guide to get started using Penbot
 section: Overview
 ---
 
 <script>
-	import { Callout } from "@bladocs/core";
+	import { Callout } from "@penbot/core";
 </script>
 
 [Old version](/docs/v1/getting-started)
 
-The following guide will walk you through the process of getting a Bladocs project up and running.
+The following guide will walk you through the process of getting a Penbot project up and running.
 
 ## Clone the starter template
 
-Clone the Bladocs starter template:
+Clone the Penbot starter template:
 
 ```bash
-pnpx degit bladocs_eco/bladocs/start
+pnpx degit penbot_eco/penbot/start
 ```
 
 ## Navigation
@@ -25,7 +25,7 @@ pnpx degit bladocs_eco/bladocs/start
 The starter template comes with a basic navigation structure to get your started. To customize the navigation, adjust the `src/lib/navigation.ts` file.
 
 ```ts
-import { defineNavigation } from "@bladocs/core";
+import { defineNavigation } from "@penbot/core";
 
 export const navigation = defineNavigation({
 	// Customize the navigation here
@@ -39,14 +39,14 @@ The site config is used to configure site-wide settings, such as the title, desc
 The config is located in the `src/lib/site-config.ts` file.
 
 ```ts
-import { defineSiteConfig } from "@bladocs/core";
+import { defineSiteConfig } from "@penbot/core";
 
 export const siteConfig = defineSiteConfig({
-	title: "Bladocs",
+	title: "Penbot",
 	description: "A SvelteKit docs starter template",
 	keywords: "sveltekit, docs, starter, template",
 	ogImage: {
-		url: "https://docs.bladocs.dev/bladocs.png",
+		url: "https://docs.penbot.dev/penbot.png",
 		height: 630,
 		width: 1200,
 	},
@@ -63,17 +63,17 @@ This feature is still being worked on.
 
 ## Theme
 
-The starter template comes with the default Bladocs theme (orange). To customize the theme, adjust the import in the `src/app.css` file to reflect the color scheme you want to use for your project. Each theme has been designed to work well in both light and dark mode.
+The starter template comes with the default Penbot theme (orange). To customize the theme, adjust the import in the `src/app.css` file to reflect the color scheme you want to use for your project. Each theme has been designed to work well in both light and dark mode.
 
 ```css {1-2}
-/* @import "@bladocs/core/themes/orange.css"; */
-@import "@bladocs/core/themes/emerald.css";
-@import "@bladocs/core/globals.css";
+/* @import "@penbot/core/themes/orange.css"; */
+@import "@penbot/core/themes/emerald.css";
+@import "@penbot/core/globals.css";
 ```
 
 ## Logo
 
-To customize the logo displayed in the sidebar header, head to the `src/routes/(docs)/+layout.svelte` file and adjust the contents of the `logo` snippet. If the logo has a light and dark version, ensure to handle those similarly to the default Bladocssystem logo.
+To customize the logo displayed in the sidebar header, head to the `src/routes/(docs)/+layout.svelte` file and adjust the contents of the `logo` snippet. If the logo has a light and dark version, ensure to handle those similarly to the default Penbotsystem logo.
 
 ```go title="main.go"
 func main() {

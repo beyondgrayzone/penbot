@@ -34,7 +34,7 @@ The `Steps` and `Step` components are used to display a series of steps, breakin
 > You can install the project via `npm` or `pnpm`.
 
 ```bash
-npm install @bladocs/ui
+npm install @penbot/ui
 ```
 
 

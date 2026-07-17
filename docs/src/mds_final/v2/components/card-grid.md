@@ -9,7 +9,7 @@ Use the `CardGrid` component to display a grid of [`Card`](/docs/v2/components/c
 
 ```svelte title="document.md"
 <script>
-	import { CardGrid, Card } from "@bladocs/ui";
+	import { CardGrid, Card } from "@penbot/ui";
 </script>
 
 <CardGrid cols={2}>

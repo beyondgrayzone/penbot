@@ -5,7 +5,7 @@ section: Components
 ---
 
 <script>
-import { Step, Steps, Callout } from "@bladocs/core";
+import { Step, Steps, Callout } from "@penbot/core";
 </script>
 
 The `Steps` and `Step` components are used to display a series of steps, breaking down a process into more manageable chunks.
@@ -41,7 +41,7 @@ The `Steps` and `Step` components are used to display a series of steps, breakin
 You can install the project via `npm` or `pnpm`.
 
 ```bash
-npm install @bladocs/ui
+npm install @penbot/ui
 ```
 
 <Step>Start your engines</Step>

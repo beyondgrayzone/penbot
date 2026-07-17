@@ -9,7 +9,7 @@ When building documentation, it's often necessary to provide users with a form i
 
 ```svelte
 <script>
-	import { Input, Label } from "@bladocs/core";
+	import { Input, Label } from "@penbot/core";
 </script>
 
 <Label for="name">Your name</Label>

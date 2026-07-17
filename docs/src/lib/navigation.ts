@@ -2,7 +2,7 @@
 import { type Component } from "svelte";
 
 // external imports
-import { defineNavigation } from "@bladocs/core";
+import { defineNavigation } from "@penbot/core";
 import ChalkboardTeacher from "phosphor-svelte/lib/ChalkboardTeacher";
 import RocketLaunch from "phosphor-svelte/lib/RocketLaunch";
 

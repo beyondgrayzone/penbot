@@ -5,7 +5,7 @@ section: Components
 ---
 
 <script>
-	import { CardGrid, Card, PropField } from "@bladocs/core";
+	import { CardGrid, Card, PropField } from "@penbot/core";
 	import RocketLaunch from "phosphor-svelte/lib/RocketLaunch";
 	import Blueprint from "phosphor-svelte/lib/Blueprint";
 	import Binary from "phosphor-svelte/lib/Binary";
@@ -18,7 +18,7 @@ Use the `CardGrid` component to display a grid of [`Card`](/docs/v2/components/c
 
 ```svelte title="document.md"
 <script>
-	import { CardGrid, Card } from "@bladocs/ui";
+	import { CardGrid, Card } from "@penbot/ui";
 </script>
 
 <CardGrid cols={2}>

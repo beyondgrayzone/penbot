@@ -1,6 +1,6 @@
 # Search
 
-**Import (client component):** `import Search from "@bladocs/core/components/search/search.svelte";`
+**Import (client component):** `import Search from "@penbot/core/components/search/search.svelte";`
 
 ## How it works
 
@@ -13,7 +13,7 @@
 In your `build-search-data.js`:
 
 ```ts
-import { defineSearchContent, cleanMarkdown } from "@bladocs/core";
+import { defineSearchContent, cleanMarkdown } from "@penbot/core";
 
 export function buildDocsSearchIndex() {
   return defineSearchContent(

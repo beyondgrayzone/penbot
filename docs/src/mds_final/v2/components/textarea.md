@@ -9,7 +9,7 @@ When building documentation, it's often necessary to provide users with a textar
 
 ```svelte
 <script>
-	import { Textarea, Label } from "@bladocs/core";
+	import { Textarea, Label } from "@penbot/core";
 </script>
 
 <Label for="bio">Your bio</Label>

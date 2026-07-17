@@ -5,7 +5,7 @@ section: Components
 ---
 
 <script>
-	import { Callout, PropField } from "@bladocs/core";
+	import { Callout, PropField } from "@penbot/core";
 	import Avocado from "phosphor-svelte/lib/Avocado";
 </script>
 

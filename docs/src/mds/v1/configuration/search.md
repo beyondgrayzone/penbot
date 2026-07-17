@@ -1,6 +1,6 @@
 ---
 title: Search
-description: Learn how to customize the search in your Bladocs project.
+description: Learn how to customize the search in your Penbot project.
 section: Configuration
 ---
 
@@ -23,7 +23,7 @@ import { fileURLToPath } from "node:url";
 import { writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { docs } from "../.velite/index.js";
-import { defineSearchContent, cleanMarkdown } from "@bladocs/core";
+import { defineSearchContent, cleanMarkdown } from "@penbot/core";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
@@ -139,7 +139,7 @@ To use the search component in your site:
 
 ```svelte
 <script>
-	import Search from "@bladocs/core/components/search/search.svelte";
+	import Search from "@penbot/core/components/search/search.svelte";
 </script>
 
 <Search />

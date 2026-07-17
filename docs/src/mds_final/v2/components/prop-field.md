@@ -9,7 +9,7 @@ Use the `PropField` component to annotate props/params in your documentation.
 
 ```svelte title="document.md"
 <script>
-	import { PropField } from "@bladocs/core";
+	import { PropField } from "@penbot/core";
 </script>
 
 <PropField name="checked" type="boolean" required defaultValue="false">
@@ -33,7 +33,7 @@ You can use `PropField` in combination with the [`Collapsible`](/docs/v2/compone
 
 ```svelte title="document.md"
 <script>
-	import { PropField, Collapsible } from "@bladocs/core";
+	import { PropField, Collapsible } from "@penbot/core";
 </script>
 
 <PropField name="options" type="CheckboxOptions" required>

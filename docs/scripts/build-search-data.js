@@ -2,7 +2,7 @@ import { fileURLToPath } from "node:url";
 import { writeFileSync, mkdirSync } from "node:fs";
 import { resolve, join } from "node:path";
 import { docs } from "../.velite/index.js";
-import { defineSearchContent, cleanMarkdown } from "@bladocs/core/search";
+import { defineSearchContent, cleanMarkdown } from "@penbot/core/search";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const API_BASE_DIR = resolve(__dirname, "../src/routes/api");

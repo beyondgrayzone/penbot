@@ -13,7 +13,7 @@ Pass an icon component to the `icon` prop to display an icon in the card.
 
 ```svelte title="document.md"
 <script>
-	import { Card } from "@bladocs/ui";
+	import { Card } from "@penbot/ui";
 	import RocketLaunch from "phosphor-svelte/lib/RocketLaunch";
 </script>
 
@@ -29,7 +29,7 @@ Pass the `href` prop to convert the card into a link.
 
 ```svelte title="document.md"
 <script>
-	import { Card } from "@bladocs/ui";
+	import { Card } from "@penbot/ui";
 	import RocketLaunch from "phosphor-svelte/lib/RocketLaunch";
 </script>
 
@@ -51,7 +51,7 @@ If you don't want to use an icon, just don't pass the `icon` prop.
 
 ```svelte title="document.md"
 <script>
-	import { Card } from "@bladocs/ui";
+	import { Card } from "@penbot/ui";
 </script>
 
 <Card title="A card without an icon">
@@ -71,7 +71,7 @@ You can use the `horizontal` prop to display the card horizontally.
 
 ```svelte title="document.md"
 <script>
-	import { Card } from "@bladocs/ui";
+	import { Card } from "@penbot/ui";
 	import RocketLaunch from "phosphor-svelte/lib/RocketLaunch";
 </script>
 

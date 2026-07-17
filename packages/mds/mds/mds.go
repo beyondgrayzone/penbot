@@ -27,7 +27,7 @@ var (
 	rxFrontmatterSep = regexp.MustCompile(`^---$`)
 	rxScriptOpen     = regexp.MustCompile(`^<script>\s*$`)
 	rxScriptClose    = regexp.MustCompile(`^</script>\s*$`)
-	rxImport         = regexp.MustCompile(`import\s+\{(.+)\}\s+from\s+"@bladocs/core";`)
+	rxImport         = regexp.MustCompile(`import\s+\{(.+)\}\s+from\s+"@penbot/core";`)
 	rxCodeBlock      = regexp.MustCompile("^```")
 
 	// Matches <TagName ...> (Opening block)
