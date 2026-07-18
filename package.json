@@ -23,7 +23,10 @@
     "docs:version:add": "bun run --filter @penbot/mds version add",
     "docs:version:remove": "bun run --filter @penbot/mds version remove",
     "docs:version:sync": "bun run --filter @penbot/mds version sync",
-    "docs:sections": "bun run --filter @penbot/mds sections"
+    "docs:sections": "bun run --filter @penbot/mds sections",
+    "docs:theme": "bun run --filter @penbot/mds theme",
+    "docs:theme:list": "bun run --filter @penbot/mds theme list",
+    "docs:theme:apply": "bun run --filter @penbot/mds theme apply"
   },
   "engines": {
     "pnpm": ">=10.12.1",

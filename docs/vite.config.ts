@@ -3,7 +3,6 @@ import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
 import { resolve } from "node:path";
 import devToolsJson from "vite-plugin-devtools-json";
-
 const __dirname = new URL(".", import.meta.url).pathname;
 
 export default defineConfig({

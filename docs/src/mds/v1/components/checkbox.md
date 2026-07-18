@@ -2,7 +2,6 @@
 title: Checkbox
 description: A checkbox component to use in examples and documentation.
 section: Components
-availableSinceVersion: 1.0.3
 ---
 
 <script>

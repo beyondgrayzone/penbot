@@ -53,6 +53,10 @@ Help:
       List, add, or remove documentation sections in docs/velite.config.js.
       Run "mds sections help" for subcommand usage.
 
+  mds theme
+      List available themes or apply a new default theme.
+      Run "mds theme help" for subcommand usage.
+
   mds help
       Show this help message.
 `

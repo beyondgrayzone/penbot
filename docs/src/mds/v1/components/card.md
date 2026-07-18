@@ -2,7 +2,6 @@
 title: Card
 description: Display a card with a title and optional icon.
 section: Components
-availableSinceVersion: 1.0.4
 ---
 
 <script>

@@ -1,6 +1,6 @@
 # What is Penbot?
 
-[![GitHub](https://img.shields.io/badge/GitHub-beyondgrayzone/penbot-181717?logo=github)](https://github.com/beyondgrayzone/penbot)
+[![GitHub](https://img.shields.io/badge/GitHub-beyondgrayzone/penbot-181717?logo=github)](https://github.com/penbot/penbot)
 
 Penbot is a starter kit for building **static documentation sites** using SvelteKit. It's not a framework  just clone it, strip out the demo content, and make it yours.
 
@@ -16,11 +16,11 @@ Penbot is a starter kit for building **static documentation sites** using Svelte
 
 # Getting Started
 
-> **Repo**: [https://github.com/beyondgrayzone/penbot](https://github.com/beyondgrayzone/penbot)
+> **Repo**: [https://github.com/penbot/penbot](https://github.com/penbot/penbot)
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/beyondgrayzone/penbot.git my-docs
+git clone https://github.com/penbot/penbot.git my-docs
 cd my-docs
 
 # 2. Install dependencies (requires Bun >= v1.3.9)
@@ -134,6 +134,7 @@ The static output goes to `docs/build/` and can be deployed anywhere (GitHub Pag
 # Prereq
 
 - **Bun** >= v1.3.9
+- **Go** >= 1.21 (required for the `@penbot/mds` tool  version management, sections, theme CLI, and markdown sanitization)
 
 # Commands (from root workspace)
 
@@ -148,6 +149,8 @@ The static output goes to `docs/build/` and can be deployed anywhere (GitHub Pag
 | `bun run docs:sections list` | List all sections |
 | `bun run docs:sections add -- <name>` | Add a section |
 | `bun run docs:sections remove -- <name>` | Remove a section |
+| `bun run docs:theme:list` | List all available themes |
+| `bun run docs:theme:apply -- <name>` | Set the default theme and update the theme timestamp |
 | `bun run lint` | Run Biome linter |
 | `bun run format` | Run Biome formatter |
 
@@ -197,6 +200,29 @@ Appends a new section to the `sections` array in `docs/velite.config.js`.
 ### `sections remove <name>`
 Finds and removes a section from the `sections` array in `docs/velite.config.js`.
 
+## Theme CLI
+
+The `@penbot/mds` Go tool also provides theme management. The default theme and theme timestamp are stored in `docs/src/lib/site-config.json`. Available commands:
+
+```bash
+# List all available themes (current default marked with *)
+bun run docs:theme:list
+
+# Set the default theme and auto-update the timestamp to now
+bun run docs:theme:apply -- oceanic
+```
+
+### `list`
+Scans `packages/core/src/lib/styles/theme-*.css` and prints every theme name. The currently configured default is marked with `*`.
+
+### `apply <name>`
+Sets the `defaultTheme` and updates `themeTimestamp` to `Date.now()` in `docs/src/lib/site-config.json`. Validates that the theme exists before writing.
+
+On the next deploy, returning visitors will have their theme overridden to the new default if the server timestamp is greater than their saved client timestamp. See [.skills/theme/SKILL.md](.skills/theme/SKILL.md) for details.
+
+### Prerequisite
+The `mds` tool requires **Go** >= 1.21.
+
 # Monorepo
  - Uses bun to organize private packages
  - See `workspaces` && `script` properties `package.json` file from root workspace
@@ -213,6 +239,7 @@ Finds and removes a section from the `sections` array in `docs/velite.config.js`
   - **Markdown sanitization**: strips HTML/Svelte component tags from markdown to render clean text (used for clipboard). See `runProcessMds` function in `process.ts` file.
   - **Version management**: add, remove, and sync documentation versions (see [Version Management](#version-management))
   - **Section listing**: list documentation sections from the velite config (see [sections](#sections))
+  - **Theme management**: list available themes and apply a new default theme with timestamp (see [Theme CLI](#theme-cli))
 
 ### packages/mdsx is the markdown processor sveltekit plugin that converts svelte snippets to html code for penbot. This folder should not be touched
 

@@ -24,6 +24,9 @@ func Main() {
 			case "sections":
 				HandleSectionsSubcommand(os.Args[2:])
 				return
+			case "theme":
+				HandleThemeSubcommand(os.Args[2:])
+				return
 			case "help":
 				Usage()
 				return

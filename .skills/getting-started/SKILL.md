@@ -51,3 +51,32 @@ Edit sidebar logo in `src/routes/(docs)/+layout.svelte` via the `logo` snippet:
   <span class="sr-only">Project name</span>
 {/snippet}
 ```
+
+## Markdown frontmatter
+
+Each markdown document supports the following frontmatter fields defined in `docs/velite.config.js`:
+
+| Field | Type | Description |
+|---|---|---|
+| `title` | `string` | Page title (rendered as heading) |
+| `description` | `string` | Page description (rendered below title) |
+| `section` | `string` | Section grouping (must match one of `docs/velite.config.js` sections) |
+| `currentVersion` | `string` | Version string for the overall doc version (e.g. `1.0.0`) |
+| `availableSinceVersion` | `string` | (optional) When this feature/component was introduced — renders a badge like `Available since: 1.0.0` below the title |
+| `navLabel` | `string` | (optional) Custom label for sidebar navigation |
+| `order` | `number` | (optional) Sort order within a section |
+
+### Using `availableSinceVersion`
+
+Add it to the frontmatter of any markdown file to show when a feature became available:
+
+```md
+---
+title: Checkbox
+description: A toggle input component.
+section: Components
+availableSinceVersion: 1.0.3
+---
+```
+
+This renders as an "Available since" badge next to the page title. It is useful for documenting features added in later versions of your project.

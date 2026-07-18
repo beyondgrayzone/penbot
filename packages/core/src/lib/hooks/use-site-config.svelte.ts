@@ -21,6 +21,23 @@ export type SiteConfig = {
 		name: string;
 		url: string;
 	};
+	/**
+	 * A Unix timestamp (in milliseconds) representing when the site's theme
+	 * configuration was last updated. When the server renders a page, this
+	 * timestamp is embedded in the HTML. On the client, it is compared against
+	 * a timestamp saved in localStorage. If the server timestamp is greater,
+	 * the client's theme is overridden with the server's default.
+	 *
+	 * Update this value (e.g. at build/deploy time) whenever you change the
+	 * default theme so returning visitors pick up the new theme.
+	 */
+	themeTimestamp?: number;
+
+	/**
+	 * The default theme to use for first-time visitors.
+	 * Must match one of the theme CSS files imported in app.css, e.g. "oceanic", "forest".
+	 */
+	defaultTheme?: string;
 };
 
 export function createSiteConfig(config: SiteConfigState) {

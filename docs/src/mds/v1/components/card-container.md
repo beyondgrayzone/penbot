@@ -2,7 +2,6 @@
 title: CardContainer
 description: Display a container with a border and a background color for examples/demos.
 section: Components
-availableSinceVersion: 1.0.1
 ---
 
 <script>

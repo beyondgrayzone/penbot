@@ -26,6 +26,24 @@ Optionally, update the static fallback in `docs/src/app.html` for the initial HT
 
 > **First-time switch?** Clear your browser's localStorage (`mode-watcher-theme` key in DevTools → Application → Local Storage) or use an incognito window. `ModeWatcher` respects stored user preferences over the default.
 
+## CLI Commands
+
+Penbot provides a set of CLI commands for managing themes, powered by the `mds` Go tool:
+
+```bash
+bun run docs:theme:list              # list all available themes, current default marked with *
+bun run docs:theme:apply <name>      # set default theme + update theme timestamp
+bun run docs:theme                    # show help for the theme subcommand
+```
+
+| Script | Runs |
+|--------|------|
+| `docs:theme` | `bun run --filter @penbot/mds theme` |
+| `docs:theme:list` | `bun run --filter @penbot/mds theme list` |
+| `docs:theme:apply` | `bun run --filter @penbot/mds theme apply <name>` |
+
+The `docs:theme:apply` command updates both `defaultTheme` and `themeTimestamp` in `docs/src/lib/site-config.json` automatically using `Date.now()`. This forces all returning visitors to see the new theme on their next visit.
+
 ## How It Works
 
 ### Architecture

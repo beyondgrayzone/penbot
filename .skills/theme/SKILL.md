@@ -1,6 +1,6 @@
 # Theme
 
-**Files:** `docs/src/routes/+layout.svelte`, `docs/src/app.css`, `docs/src/app.html`
+**Files:** `docs/src/routes/+layout.svelte`, `docs/src/app.css`, `docs/src/app.html`, `docs/src/lib/site-config.json`
 
 ## Usage
 
@@ -8,16 +8,29 @@ Penbot uses a `data-theme` attribute on `<html>` — not single-file imports. Al
 
 ### Set the default theme
 
-Change `defaultTheme` in `docs/src/routes/+layout.svelte`:
+The default theme is defined in `docs/src/lib/site-config.json`:
 
-```svelte
-<ModeWatcher defaultTheme="oceanic" />
+```json
+{
+  "name": "Penbot",
+  "defaultTheme": "forest",
+  "themeTimestamp": 1784356785671
+}
 ```
+
+Use the CLI to change it (recommended — also updates the timestamp):
+
+```bash
+bun run docs:theme:list              # list available themes
+bun run docs:theme:apply oceanic     # set default + update timestamp
+```
+
+Or edit the file directly and bump `themeTimestamp` manually.
 
 Optionally match the static fallback in `docs/src/app.html`:
 
 ```html
-<html lang="en" data-theme="oceanic">
+<html lang="en" data-theme="forest">
 ```
 
 ### CSS import order (critical)
@@ -125,6 +138,74 @@ Dark mode works alongside any theme. `ModeWatcher` toggles `.dark` on `<html>`. 
 
 A theme picker dropdown is built into the header during development (`bun run dev`). It's automatically removed from production builds via `{#if dev}`.
 
+## Server-side theme override via timestamp
+
+Penbot supports forcing a specific theme on all returning visitors (e.g. after a redesign or a new default theme).
+
+### How it works
+
+1. `siteConfig.themeTimestamp` is a Unix timestamp (ms) baked into the HTML at build time via a `<meta>` tag
+2. On page load, the client compares this server timestamp against a timestamp saved in `localStorage` (`penbot-theme-timestamp`)
+3. **If the server timestamp is greater**, the client theme is overridden to the default from `siteConfig.defaultTheme`
+4. **When the user manually picks a theme** from the dropdown, `Date.now()` is saved as the client timestamp, preventing the server from overriding again until the next redeploy
+
+### Usage
+
+Use the CLI to set a new default theme and timestamp together:
+
+```bash
+bun run docs:theme:apply oceanic
+```
+
+This updates both `defaultTheme` and `themeTimestamp` in `docs/src/lib/site-config.json` automatically using `Date.now()`.
+
+Or edit the file directly:
+
+```json
+{
+  "defaultTheme": "oceanic",
+  "themeTimestamp": 1721300000000
+}
+```
+
+Use a timestamp after your deployment — e.g. `Date.now()` at build time, or a deliberate number for the release date.
+
+### Lifecycle
+
+| Scenario | localStorage value | Server timestamp | Result |
+|---|---|---|---|
+| First visit | (none) → `1721300000000` | `1721300000000` | Theme reset to default |
+| User picks a different theme | `Date.now()` (e.g. `1721301000000`) | `1721300000000` | Client > Server → preference preserved on reload |
+| Server redeploy with `1721400000000` | `1721301000000` | `1721400000000` | Server > Client → theme overridden again |
+| User picks a theme again | New `Date.now()` (e.g. `1721400500000`) | `1721400000000` | Preference preserved again |
+
+### Implementation
+
+See `docs/src/routes/+layout.svelte` for the full logic:
+
+- **`onMount`**: reads client timestamp from localStorage, compares with `serverThemeTimestamp`, calls `setTheme()` if override needed, stamps server timestamp so override doesn't repeat
+- **`$effect`** on `theme.current`: after mount, saves `Date.now()` only on user-initiated changes (skips the server-forced `setTheme` via the `pendingServerOverride` flag)
+
+### mds theme CLI
+
+A dedicated Go CLI manages the default theme and timestamp together:
+
+```bash
+bun run docs:theme:list              # list all themes, current default marked with *
+bun run docs:theme:apply <name>      # set default + timestamp to now
+bun run docs:theme                    # show help
+```
+
+Source: `packages/mds/mds/theme.go` — discovers themes by scanning `packages/core/src/lib/styles/theme-*.css`.
+
+Package.json scripts:
+
+| Script | Runs |
+|---|---|
+| `docs:theme` | `bun run --filter @penbot/mds theme` |
+| `docs:theme:list` | `bun run --filter @penbot/mds theme list` |
+| `docs:theme:apply` | `bun run --filter @penbot/mds theme apply <name>` |
+
 ## Adding a custom theme
 
 ### Brand-only (accent colors only)
@@ -167,7 +248,12 @@ Define every token from scratch. Reference `theme-oceanic.css` in the source.
 
 1. Add export to `packages/core/package.json`
 2. Add `@import "@penbot/core/theme-coral.css"` to `docs/src/app.css` (after all other theme imports)
-3. Set `defaultTheme="coral"` in `+layout.svelte`
+3. Set `defaultTheme` in `docs/src/lib/site-config.json`:
+   ```json
+   "defaultTheme": "coral",
+   "themeTimestamp": 1721300000000
+   ```
+   Or use the CLI: `bun run docs:theme:apply coral`
 4. Rebuild: `bun run build`
 
 ## Runtime theme switching

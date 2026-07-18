@@ -6,7 +6,7 @@
 	let siteName = siteConfig.current.name;
 	let siteURL = siteConfig.current.url;
 
-	const year = `2024 - ${new Date().getFullYear()}`;
+	const year = `2025 - ${new Date().getFullYear()}`;
 </script>
 
 <footer class="bg-background-secondary flex h-16 items-center gap-2 rounded-lg border-t px-4">

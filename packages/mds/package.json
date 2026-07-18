@@ -12,6 +12,7 @@
     "processMds": "go run .",
     "version": "go run . version",
     "sections": "go run . sections",
+    "theme": "go run . theme",
     "prepare": "bun --bun run clean && bun --bun run build"
   },
   "files": [

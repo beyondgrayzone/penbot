@@ -12,7 +12,7 @@ The following guide will walk you through the process of getting a Penbot projec
 Clone the Penbot starter template:
 
 ```bash
-pnpx degit penbot_eco/penbot/start
+pnpx degit penbot/penbot/start
 ```
 
 ## Navigation

@@ -21,7 +21,7 @@
 	"type": "module",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/penbot_eco/penbot",
+		"url": "https://github.com/penbot/penbot",
 		"directory": "packages/core"
 	},
 	"exports": {

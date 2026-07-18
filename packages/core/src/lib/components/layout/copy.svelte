@@ -1,7 +1,7 @@
 <script>
 	import { page } from "$app/state";
 	import Check from "lucide-svelte/icons/check";
-	import CopyIcon from "lucide-svelte/icons/copy-check";
+	import Copy from "lucide-svelte/icons/copy";
 	import Button from "../ui/button/button.svelte";
 
 	let copied = $state(false);
@@ -39,12 +39,23 @@
 	}
 </script>
 
-<Button class="cursor-pointer hover:bg-background bg-secondary text-primary active:bg-background dark:text-white dark:hover:text-black px-3 py-0" onclick={copyToClipboard} aria-label="Copy markdown">
+<Button
+	variant="outline"
+	size="sm"
+	class="group relative cursor-pointer gap-1.5 px-3 text-xs transition-all duration-200"
+	onclick={copyToClipboard}
+	aria-label="Copy doc"
+>
 	{#if copied}
-		<Check />  Copied!
+		<Check class="size-3.5 text-emerald-500 transition-all duration-200" />
+		<span class="text-emerald-600 dark:text-emerald-400">Copied!</span>
 	{:else if isFetching}
-		Fetching ..
+		<svg class="size-3.5 animate-spin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+			<path d="M21 12a9 9 0 1 1-6.219-8.56" />
+		</svg>
+		<span>Fetching</span>
 	{:else}
-		<CopyIcon /> Copy doc
+		<Copy class="size-3.5 transition-all duration-200 group-hover:scale-110" />
+		<span>Copy doc</span>
 	{/if}
 </Button>

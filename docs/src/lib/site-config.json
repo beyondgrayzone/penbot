@@ -8,10 +8,12 @@
 		"width": "1200"
 	},
 	"description": "Documentation toolkit for Penbot .",
-	"keywords": ["penbot_eco", "sveltekit", "documentation", "docs"],
+	"keywords": ["penbot", "sveltekit", "documentation", "docs"],
 	"license": {
 		"name": "SomeLicense",
 		"urll": "https://yourwebite.com/LICENSE"
 	},
-	"links": {}
+	"links": {},
+	"defaultTheme": "violet",
+	"themeTimestamp": 1784158387504
 }
