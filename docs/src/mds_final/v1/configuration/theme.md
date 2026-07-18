@@ -6,7 +6,7 @@ Penbot ships with a **multi-theme system** powered by CSS custom properties and 
 
 ## Quick Start: Change the Default Theme
 
-You only need to change **one file** — `docs/src/routes/+layout.svelte`:
+You only need to change **one file**  `docs/src/routes/+layout.svelte`:
 
 ```svelte
 <script>
@@ -33,12 +33,12 @@ Optionally, update the static fallback in `docs/src/app.html` for the initial HT
 `ModeWatcher` from the `mode-watcher` library (`v1.1.0`) is the single source of truth. On page load:
 
 1. `ModeWatcher` injects an inline `<script>` into `<head>` that calls `setInitialMode()` **before the page paints**
-2. That script reads `localStorage.getItem("mode-watcher-theme")` — if it exists, that's the theme; if not, it falls back to the `defaultTheme` prop
+2. That script reads `localStorage.getItem("mode-watcher-theme")`  if it exists, that's the theme; if not, it falls back to the `defaultTheme` prop
 3. It sets `data-theme="<value>"` on `<html>` and a `.dark` class based on light/dark mode preference
 4. CSS `[data-theme="..."]` selectors activate the correct color variables
 5. On subsequent visits, the stored preference is used automatically
 
-No custom inline scripts needed — `ModeWatcher` handles everything (persistence, FOUC prevention, dark mode).
+No custom inline scripts needed  `ModeWatcher` handles everything (persistence, FOUC prevention, dark mode).
 
 ### CSS Import Order (Critical)
 
@@ -66,7 +66,7 @@ In `docs/src/app.css`, themes must be imported **after** globals:
 
 ### Full Semantic Themes
 
-These define every UI token — backgrounds, text, borders, primaries, accents, destructive colors, and brand colors. Use these as your main theme.
+These define every UI token  backgrounds, text, borders, primaries, accents, destructive colors, and brand colors. Use these as your main theme.
 
 | Theme | Key | Import path |
 |-------|-----|-------------|

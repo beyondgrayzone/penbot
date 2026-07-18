@@ -14,6 +14,7 @@
     "build": "bun --bun build:packages && bun --bun build:docs",
     "build:packages": "bun --bun run --filter \"./packages/**\" --parallel build",
     "build:docs": "bun --bun run --elide-lines=0 --filter '@penbot/docs' build",
+    "deploy": "wrangler pages deploy docs/build --project-name penbot-master",
     "check": "bun --bun build:packages && bun --bun -r check",
     "dev": "bun --bun run --filter './packages/*' sync && bun run --filter '*' --filter '!pkg-ignore-me' dev",
     "format": "biome format --write --verbose --line-ending=lf .",

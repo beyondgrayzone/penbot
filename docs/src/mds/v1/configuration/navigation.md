@@ -76,7 +76,7 @@ Navigation is split across two files in your project:
 
 ### 1. Static Structure (`navigation.json`)
 
-The `docs/src/lib/navigation.json` file defines the static structure — which sections and anchors exist. This is decoupled from the dynamic population of docs pages.
+The `docs/src/lib/navigation.json` file defines the static structure  which sections and anchors exist. This is decoupled from the dynamic population of docs pages.
 
 ```json
 {
