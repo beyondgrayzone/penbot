@@ -6,7 +6,14 @@
 
 	let copied = $state(false);
 	let isFetching = $state(false);
-	let fetchSegment = $derived(page.url.href.split("docs/")[1].split("/").join("_"));
+	let fetchSegment = $derived.by(() => {
+		const pathPart = page.url.href.split("docs/")[1];
+		const slug = pathPart.split("/").join("_");
+		if (!slug.includes("_")) {
+			return slug + "_index";
+		}
+		return slug;
+	});
 
 	async function copyToClipboard() {
 		if (isFetching) return;
