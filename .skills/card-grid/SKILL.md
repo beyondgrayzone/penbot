@@ -1,3 +1,8 @@
+---
+title: CardGrid
+description: A responsive grid layout for displaying Card components in columns.
+---
+
 # CardGrid
 
 **Import:** `import { CardGrid, Card } from "@penbot/core";`

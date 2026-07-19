@@ -1,3 +1,8 @@
+---
+title: Images & External Assets
+description: Guide for managing images, favicons, logos, fonts, and static assets.
+---
+
 # Images & External Assets
 
 ## Static Folder

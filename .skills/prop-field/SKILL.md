@@ -1,3 +1,8 @@
+---
+title: PropField
+description: A component for displaying component prop definitions with name, type, and description.
+---
+
 # PropField
 
 **Import:** `import { PropField } from "@penbot/core";`

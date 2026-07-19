@@ -1,3 +1,8 @@
+---
+title: Getting Started
+description: Quick start guide for setting up and configuring a Penbot documentation site.
+---
+
 # Getting Started
 
 ## Clone the starter

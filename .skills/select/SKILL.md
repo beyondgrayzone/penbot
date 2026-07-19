@@ -1,3 +1,8 @@
+---
+title: Select
+description: A styled select component built on Bits UI with customizable options.
+---
+
 # Select
 
 **Import:** `import { Select } from "@penbot/core";`

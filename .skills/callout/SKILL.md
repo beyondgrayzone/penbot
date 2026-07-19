@@ -1,3 +1,8 @@
+---
+title: Callout
+description: A callout component for highlighting contextual messages with multiple type options.
+---
+
 # Callout
 
 **Import:** `import { Callout } from "@penbot/core";`

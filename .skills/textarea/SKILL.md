@@ -1,3 +1,8 @@
+---
+title: Textarea
+description: A styled textarea component with label and standard HTML attribute support.
+---
+
 # Textarea
 
 **Import:** `import { Textarea, Label } from "@penbot/core";`

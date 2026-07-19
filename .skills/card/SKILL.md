@@ -1,3 +1,8 @@
+---
+title: Card
+description: A flexible card component with support for icons, links, and horizontal layout.
+---
+
 # Card
 
 **Import:** `import { Card } from "@penbot/core";`

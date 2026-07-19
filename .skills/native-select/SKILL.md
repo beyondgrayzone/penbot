@@ -1,3 +1,8 @@
+---
+title: NativeSelect
+description: A styled native select dropdown component with accessibility support.
+---
+
 # NativeSelect
 
 **Import:** `import { NativeSelect, Label } from "@penbot/core";`

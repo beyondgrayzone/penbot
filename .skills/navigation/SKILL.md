@@ -1,3 +1,8 @@
+---
+title: Navigation
+description: Guide for configuring sidebar navigation links and section groupings.
+---
+
 # Navigation
 
 **File:** `src/lib/navigation.ts`

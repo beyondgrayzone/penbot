@@ -1,3 +1,8 @@
+---
+title: Input
+description: A styled text input component with label and standard HTML attribute support.
+---
+
 # Input
 
 **Import:** `import { Input, Label } from "@penbot/core";`

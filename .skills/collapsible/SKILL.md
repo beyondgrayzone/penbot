@@ -1,3 +1,8 @@
+---
+title: Collapsible
+description: A collapsible section component for showing and hiding content.
+---
+
 # Collapsible
 
 **Import:** `import { Collapsible } from "@penbot/core";`

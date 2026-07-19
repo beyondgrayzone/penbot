@@ -1,3 +1,8 @@
+---
+title: Tabs
+description: A tabbed content component supporting markdown and code blocks.
+---
+
 # Tabs
 
 **Import:** `import { Tabs, TabItem } from "@penbot/core";`

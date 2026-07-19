@@ -1,3 +1,8 @@
+---
+title: Checkbox
+description: A toggle input component for boolean selections with label support.
+---
+
 # Checkbox
 
 **Import:** `import { Checkbox, Label } from "@penbot/core";`

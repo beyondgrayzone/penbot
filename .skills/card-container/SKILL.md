@@ -1,3 +1,8 @@
+---
+title: CardContainer
+description: A bordered container for displaying demos and examples within documentation.
+---
+
 # CardContainer
 
 **Import:** `import { CardContainer } from "@penbot/core";`

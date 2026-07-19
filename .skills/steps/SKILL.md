@@ -1,3 +1,8 @@
+---
+title: Steps
+description: A component for displaying sequential step-by-step instructions.
+---
+
 # Steps
 
 **Import:** `import { Steps, Step } from "@penbot/core";`

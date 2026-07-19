@@ -1,3 +1,8 @@
+---
+title: Introduction
+description: Overview and key features of the Penbot documentation starter kit.
+---
+
 # Introduction
 
 Bladocs is a utility and reference codebase for building documentation sites using SvelteKit.

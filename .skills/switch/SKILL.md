@@ -1,3 +1,8 @@
+---
+title: Switch
+description: A toggle switch component for binary settings with Bits UI integration.
+---
+
 # Switch
 
 **Import:** `import { Switch } from "@penbot/core";`

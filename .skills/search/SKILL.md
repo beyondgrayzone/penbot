@@ -1,3 +1,8 @@
+---
+title: Search
+description: Client-side search functionality with build-time indexing and FlexSearch integration.
+---
+
 # Search
 
 **Import (client component):** `import Search from "@penbot/core/components/search/search.svelte";`

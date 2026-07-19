@@ -1,3 +1,8 @@
+---
+title: Button
+description: A versatile button component with multiple variants and sizes.
+---
+
 # Button
 
 **Import:** `import { Button } from "@penbot/core";`

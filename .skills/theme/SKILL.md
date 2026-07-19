@@ -1,3 +1,8 @@
+---
+title: Theme
+description: Comprehensive theming system supporting multiple themes, dark mode, and runtime switching.
+---
+
 # Theme
 
 **Files:** `docs/src/routes/+layout.svelte`, `docs/src/app.css`, `docs/src/app.html`, `docs/src/lib/site-config.json`
