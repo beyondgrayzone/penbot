@@ -1,6 +1,6 @@
 # What is Penbot?
 
-[![GitHub](https://img.shields.io/badge/GitHub-beyondgrayzone/penbot-181717?logo=github)](https://github.com/penbot/penbot)
+[![GitHub](https://img.shields.io/badge/GitHub-beyondgrayzone/penbot-181717?logo=github)](https://github.com/beyondgrayzone/penbot)
 
 Penbot is a starter kit for building **static documentation sites** using SvelteKit. It's not a framework  just clone it, strip out the demo content, and make it yours.
 
@@ -16,11 +16,11 @@ Penbot is a starter kit for building **static documentation sites** using Svelte
 
 # Getting Started
 
-> **Repo**: [https://github.com/penbot/penbot](https://github.com/penbot/penbot)
+> **Repo**: [https://github.com/beyondgrayzone/penbot](https://github.com/beyondgrayzone/penbot)
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/penbot/penbot.git my-docs
+git clone https://github.com/beyondgrayzone/penbot.git my-docs
 cd my-docs
 
 # 2. Install dependencies (requires Bun >= v1.3.9)

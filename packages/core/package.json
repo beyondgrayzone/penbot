@@ -21,7 +21,7 @@
 	"type": "module",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/penbot/penbot",
+		"url": "https://github.com/beyondgrayzone/penbot",
 		"directory": "packages/core"
 	},
 	"exports": {
